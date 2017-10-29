@@ -1,0 +1,15 @@
+*
+
+!.gitignore
+
+!compton.conf
+!redshift.conf
+
+!dunst
+!dunst/*
+
+!fontconfig
+!fontconfig/*
+
+!nvim
+!nvim/init.vim

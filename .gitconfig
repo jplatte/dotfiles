@@ -1,0 +1,11 @@
+[user]
+	email = jplatte+git@posteo.de
+	name = Jonas Platte
+[push]
+	default = simple
+[alias]
+	st = status
+	ff = merge --ff-only
+	hist = log --all --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+[color]
+	ui = auto

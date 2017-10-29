@@ -1,0 +1,15 @@
+######################
+# MX Master Settings #
+######################
+
+# thumb wheel down => prev workspace
+"i3-workspace-scroll prev"
+    b:6
+
+# thumb wheel down => next workspace
+"i3-workspace-scroll next"
+    b:7
+
+# thumb button => move workspace to next output
+"i3-msg 'move workspace to output right'"
+    m:0xc + c:23

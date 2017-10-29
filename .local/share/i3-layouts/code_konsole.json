@@ -1,0 +1,18 @@
+{
+    "layout": "splitv",
+    "nodes": [
+        {
+            "name": "Visual Studio Code",
+            "percent": 0.75,
+            "swallows": [{ "class": "(?i)^code$" }],
+            "type": "con"
+        },
+        {
+            "name": "konsole",
+            "percent": 0.25,
+            "swallows": [{ "class": "(?i)^konsole$" }],
+            "type": "con"
+        }
+    ]
+}
+
