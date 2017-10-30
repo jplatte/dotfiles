@@ -3,6 +3,7 @@
 !.gitignore
 
 !compton.conf
+!konsolerc
 !redshift.conf
 
 !dunst
