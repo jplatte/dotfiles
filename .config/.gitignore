@@ -5,12 +5,17 @@
 !compton.conf
 !konsolerc
 !redshift.conf
+!user-dirs.dirs
+!user-dirs.locale
 
 !dunst
 !dunst/*
 
 !fontconfig
 !fontconfig/*
+
+!gtk-3.0
+!gtk-3.0/*
 
 !nvim
 !nvim/init.vim
