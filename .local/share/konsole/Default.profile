@@ -8,6 +8,7 @@ CursorShape=2
 [General]
 LocalTabTitleFormat=%w
 Name=Default
+Parent=FALLBACK/
 ShowTerminalSizeHint=false
 
 [Scrolling]
@@ -15,5 +16,5 @@ HistorySize=20000
 ScrollBarPosition=2
 
 [Terminal Features]
-BlinkingCursorEnabled=1
+BlinkingCursorEnabled=true
 FlowControlEnabled=false
