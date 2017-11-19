@@ -21,9 +21,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export CARGO_INCREMENTAL=1
 
 alias ccl='cargo clippy'
-alias rust-update='rustup update && cargo install -f clippy && cargo install -f rustfmt-nightly'
-
-#export RLS_ROOT="$HOME/Projekte/rls"
+alias rust-update='rustup update && cargo install -f clippy'
 
 # Dotnet telemetry?!
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
