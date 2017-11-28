@@ -1,6 +1,6 @@
 # PATH
 typeset -U path
-path=($path[@] ~/.local/bin ~/.cargo/bin)
+path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 
 # Aliases
 alias ip='ip -c'
@@ -22,6 +22,9 @@ export CARGO_INCREMENTAL=1
 
 alias ccl='cargo clippy'
 alias rust-update='rustup update && cargo install -f clippy'
+
+# Make `npm install -g` user-wide instead of system-wide
+NPM_PACKAGES="$HOME/.npm-packages"
 
 # Dotnet telemetry?!
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
