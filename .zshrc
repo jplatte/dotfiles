@@ -21,7 +21,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export CARGO_INCREMENTAL=1
 
 alias ccl='cargo clippy'
-alias rust-update='rustup update && cargo install -f clippy'
+alias rust-update='rustup update && cargo +nightly install -f clippy'
 
 # Make `npm install -g` user-wide instead of system-wide
 NPM_PACKAGES="$HOME/.npm-packages"
