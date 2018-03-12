@@ -4,6 +4,7 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 
 # Aliases
 alias ip='ip -c'
+alias diff='diff --color=auto'
 alias ssh="ssh-add -l > /dev/null || ssh-add && unalias ssh; ssh"
 alias launch-testing-chroot="sudo arch-chroot /opt/arch-testing /bin/sh -c 'cd /root && /bin/zsh'"
 
