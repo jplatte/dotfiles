@@ -10,6 +10,7 @@ LocalTabTitleFormat=%w
 Name=Default
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
+TerminalColumns=100
 
 [Scrolling]
 HistorySize=20000
