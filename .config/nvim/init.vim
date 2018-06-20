@@ -1,6 +1,9 @@
 " show line numbers
 set number
 
+" work around stupid bug
+set guicursor=
+
 " tab configuration
 set shiftwidth=4
 set tabstop=4
