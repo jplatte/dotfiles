@@ -19,13 +19,6 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # roxterm and lxterm don't indicate 256color support
 #export TERM=xterm-256color
 
-# Rust stuff
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-export CARGO_INCREMENTAL=1
-
-alias ccl='cargo clippy'
-alias rust-update='rustup update && cargo +nightly install -f clippy'
-
 # Make `npm install -g` user-wide instead of system-wide
 NPM_PACKAGES="$HOME/.npm-packages"
 
