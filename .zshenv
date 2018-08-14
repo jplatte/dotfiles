@@ -10,7 +10,3 @@ export QT_STYLE_OVERRIDE='gtk2'
 # Keyboard layout (for sway)
 export XKB_DEFAULT_LAYOUT=de
 export XKB_DEFAULT_VARIANT=nodeadkeys
-
-# Rust dev
-typeset -U LD_LIBRARY_PATH
-LD_LIBRARY_PATH=($LD_LIBRARY_PATH[@] "$(rustc --print sysroot)/lib")
