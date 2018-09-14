@@ -62,6 +62,7 @@ for_window [app_id="^\.$"] floating enable
 # Program shortcuts
 bindsym $mod+Return exec $term
 bindsym $mod+n exec $file_manager
+bindsym $mod+g exec gedit
 bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
 bindsym $mod+y workspace "1:"; exec $browser
 bindsym $mod+Shift+Y exec firefox-nightly -P yt
