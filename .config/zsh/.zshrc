@@ -6,9 +6,7 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 alias ip='ip -c'
 alias diff='diff --color=auto'
 alias ssh="ssh-add -l > /dev/null || ssh-add && unalias ssh; ssh"
-alias launch-testing-chroot="sudo arch-chroot /opt/arch-testing /bin/sh -c 'cd /root && /bin/zsh'"
 alias rg='rg --no-ignore-vcs'
-alias aurman='aurman --show_changes'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
 alias sudo='sudo '
