@@ -4,6 +4,7 @@
 
 !compton.conf
 !konsolerc
+!pikaur.conf
 !redshift.conf
 !user-dirs.dirs
 !user-dirs.locale
@@ -20,5 +21,11 @@
 !gtk-3.0
 !gtk-3.0/*
 
+!mako
+!mako/*
+
 !nvim
 !nvim/init.vim
+
+!zsh
+!zsh/*
