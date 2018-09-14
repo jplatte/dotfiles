@@ -1,0 +1,6 @@
+# Input device configuration
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    natural_scroll enabled
+    scroll_method two_finger
+    tap enabled
+}

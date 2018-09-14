@@ -1,0 +1,253 @@
+# Variables
+set $mod Mod4
+set $menu dmenu_path | dmenu -i -b -l 36 | xargs swaymsg exec
+set $term konsole
+set $browser firefox-nightly -P nightly
+set $file_manager nautilus
+
+# Colors               (border  bg      text    indicator child_border)
+client.focused          #bdbdbd #bdbdbd #000000 #bdbdbd   #bdbdbd
+client.focused_inactive #333333 #5f676a #ffffff #5f676a   #5f676a
+client.unfocused        #1e1e1e #1e1e1e #bdbdbd #1e1e1e   #1e1e1e
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+
+# Font
+font pango:Encode Sans 11
+
+# Window borders
+new_window pixel 1
+new_float pixel 1
+hide_edge_borders smart
+
+workspace_layout default
+#popup_during_fullscreen leave_fullscreen # TODO
+
+# Autostart
+exec --no-startup-id sh -c 'nmcli monitor | while read _; do pkill -RTMIN+4 i3blocks; done >/dev/null'
+exec --no-startup-id mako
+#exec --no-startup-id nm-applet
+#exec --no-startup-id nextcloud
+
+exec $browser
+exec signal-desktop
+exec riot-desktop
+
+# Input device configuration
+input "*" {
+    xkb_layout de
+    xkb_variant nodeadkeys
+    xkb_options compose:caps
+}
+
+# Output configuration
+output * bg ~/Bilder/Wallpaper/FLATzero_2880x1800.jpg fill
+
+# Default workspaces for common programs
+assign [class="^Signal$"] 2:
+assign [class="^Riot$"] 2:
+assign [class="^Thunderbird$"] 3:
+assign [app_id="feedreader"] 3:
+assign [class="^Steam$"] 11:
+assign [class="^Wine$"] 12:
+assign [app_id="keepassxc"] 21:
+assign [app_id="quodlibet"] 42:
+
+# Layout defaults
+for_window [app_id="^zenity$"] floating enable
+for_window [app_id="^glade-previewer$"] floating enable
+for_window [app_id="^gnome-calculator$"] floating enable
+for_window [app_id="^glade-previewer$"] floating enable
+for_window [app_id="^\.$"] floating enable
+
+# Program shortcuts
+bindsym $mod+Return exec $term
+bindsym $mod+n exec $file_manager
+bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
+bindsym $mod+y workspace "1:"; exec $browser
+bindsym $mod+Shift+Y exec firefox-nightly -P yt
+
+# Screenshots
+bindsym Print       exec gnome-screenshot
+bindsym Shift+Print exec gnome-screenshot -w
+
+# Volume controls
+bindsym Mod1+F5 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym Mod1+F6 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym Mod1+F3 exec --no-startup-id pamixer -t   && pkill -RTMIN+1 i3blocks
+
+# Music player controls
+bindsym KP_Left  exec --no-startup-id quodlibet --force-previous
+bindsym KP_Begin exec --no-startup-id quodlibet --run --play-pause
+bindsym KP_Right exec --no-startup-id quodlibet --next
+bindsym KP_Up    exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume +5 && pkill -RTMIN+3 i3blocks
+bindsym KP_Down  exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume -5 && pkill -RTMIN+3 i3blocks
+
+# Display brightness controls
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 10
+
+# Notifications
+bindsym Control+Space exec makoctl dismiss
+bindsym Control+Shift+Space exec makoctl dismiss --all
+
+# Lock screen
+bindsym Control+Mod1+l exec ~/.local/bin/scripts/lock-way
+
+# ... automatically when suspending
+exec swayidle before-sleep ~/.local/bin/scripts/lock-way
+
+# Poweroff, reboot prompts
+bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
+bindsym Control+$mod+x exec ~/.local/bin/scripts/zenity-poweroff
+bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
+bindsym Control+$mod+s exec ~/.local/bin/scripts/zenity-suspend
+
+# Move workspace between outputs
+bindsym $mod+x move workspace to output right
+
+bindsym Control+$mod+h move workspace to output left
+bindsym Control+$mod+j move workspace to output down
+bindsym Control+$mod+k move workspace to output right
+bindsym Control+$mod+l move workspace to output up
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start your launcher
+bindsym $mod+d exec $menu
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# exit sway (logs you out of your wayland session)
+bindsym $mod+Shift+e exit
+
+# Move your focus around with $mod+[h|j|k|l], like vim
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+# or use $mod+[up|down|left|right]
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# _move_ the focused window with the same, but add Shift
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# ditto, with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# switch to workspace
+bindsym $mod+1   workspace "1:"
+bindsym $mod+2   workspace "2:"
+bindsym $mod+3   workspace "3:"
+bindsym $mod+4   workspace number 4
+bindsym $mod+5   workspace number 5
+bindsym $mod+6   workspace number 6
+bindsym $mod+7   workspace number 7
+bindsym $mod+8   workspace number 8
+bindsym $mod+9   workspace number 9
+bindsym $mod+0   workspace number 10
+bindsym $mod+F1  workspace "11:"
+bindsym $mod+F2  workspace "12:"
+bindsym $mod+F3  workspace "13:"
+bindsym $mod+F4  workspace number 14
+bindsym $mod+F5  workspace number 15
+bindsym $mod+F6  workspace number 16
+bindsym $mod+F7  workspace number 17
+bindsym $mod+F8  workspace number 18
+bindsym $mod+F9  workspace number 19
+bindsym $mod+F10 workspace number 20
+bindsym $mod+F11 workspace "21:"
+bindsym $mod+F12 workspace "42:"
+
+bindsym KP_Divide   workspace prev_on_output
+bindsym KP_Multiply workspace next_on_output
+
+# move focused container to workspace
+bindsym $mod+Shift+1    move container to workspace "1:"
+bindsym $mod+Shift+2    move container to workspace "2:"
+bindsym $mod+Shift+3    move container to workspace "3:"
+bindsym $mod+Shift+4    move container to workspace number 4
+bindsym $mod+Shift+5    move container to workspace number 5
+bindsym $mod+Shift+6    move container to workspace number 6
+bindsym $mod+Shift+7    move container to workspace number 7
+bindsym $mod+Shift+8    move container to workspace number 8
+bindsym $mod+Shift+9    move container to workspace number 9
+bindsym $mod+Shift+0    move container to workspace number 10
+bindsym $mod+Shift+F1   move container to workspace "11:"
+bindsym $mod+Shift+F2   move container to workspace "12:"
+bindsym $mod+Shift+F3   move container to workspace "13:"
+bindsym $mod+Shift+F4   move container to workspace number 14
+bindsym $mod+Shift+F5   move container to workspace number 15
+bindsym $mod+Shift+F6   move container to workspace number 16
+bindsym $mod+Shift+F7   move container to workspace number 17
+bindsym $mod+Shift+F8   move container to workspace number 18
+bindsym $mod+Shift+F9   move container to workspace number 19
+bindsym $mod+Shift+F10  move container to workspace number 20
+bindsym $mod+Shift+F11  move container to workspace "21:"
+bindsym $mod+Shift+F12  move container to workspace "42:"
+
+# Layout stuff
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# move focus to the parent container
+bindsym $mod+a focus parent
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+# Status Bar
+bar {
+    position top
+    font pango:Encode Sans, Font Awesome 5 Free, Font Awesome 5 Brands 12
+    separator_symbol " | "
+    strip_workspace_numbers yes
+
+    colors {
+        background #181818
+        statusline #bdbdbd
+
+        focused_workspace  #181818 #bdbdbd #000000
+        active_workspace   #181818 #5f676a #ffffff
+        inactive_workspace #181818 #181818 #bdbdbd
+        urgent_workspace   #181818 #900000 #ffffff
+    }
+
+    status_command i3blocks -c ~/.config/i3blocks/`hostname`/config
+}
+
+include ~/.config/sway/`hostname`/*

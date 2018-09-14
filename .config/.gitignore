@@ -27,5 +27,11 @@
 !nvim
 !nvim/init.vim
 
+!sway
+!sway/**
+
 !zsh
-!zsh/*
+!zsh/.zlogin
+!zsh/.zlogout
+!zsh/.zshenv
+!zsh/.zshrc
