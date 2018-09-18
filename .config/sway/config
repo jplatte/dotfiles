@@ -46,18 +46,20 @@ output * bg ~/Bilder/Wallpaper/FLATzero_2880x1800.jpg fill
 assign [class="^Signal$"] 2:
 assign [class="^Riot$"] 2:
 assign [class="^Thunderbird$"] 3:
-assign [app_id="feedreader"] 3:
+assign [app_id="^feedreader$"] 3:
 assign [class="^Steam$"] 11:
 assign [class="^Wine$"] 12:
-assign [app_id="keepassxc"] 21:
-assign [app_id="quodlibet"] 42:
+assign [app_id="^keepassxc$" title="^KeePassXC$"] 21: # KeePassXC main window
+assign [app_id="^quodlibet$"] 42:
 
 # Layout defaults
 for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 for_window [app_id="^gnome-calculator$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
-for_window [app_id="^\.$"] floating enable
+for_window [app_id="^nautilus$" title="^nautilus$"] floating enable # Nautilus typeahead popup
+for_window [app_id="^keepassxc$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
+for_window [app_id="^\.$"] floating enable # gtk-rs programs have this id by default
 
 # Program shortcuts
 bindsym $mod+Return exec $term
