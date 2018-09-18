@@ -49,7 +49,7 @@ assign [class="^Thunderbird$"] 3:
 assign [app_id="^feedreader$"] 3:
 assign [class="^Steam$"] 11:
 assign [class="^Wine$"] 12:
-assign [app_id="^keepassxc$" title="^KeePassXC$"] 21: # KeePassXC main window
+assign [app_id="^keepassxc$" title="KeePassXC$"] 21:
 assign [app_id="^quodlibet$"] 42:
 
 # Layout defaults

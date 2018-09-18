@@ -5,8 +5,20 @@
 output DP-1 pos 0,0
 output DVI-D-1 pos 1920,0
 
+# Layout defaults
+for_window [class="^Thunderbird$"] layout tabbed
+for_window [app_id="^feedreader$"] layout tabbed
+
+# Default outputs for workspaces
+workspace "1:" output DP-1
+workspace "2:" output DP-1
+workspace "3:" output DP-1
+workspace "21:" output DVI-D-1
+workspace "42:" output DVI-D-1
+
 # Autostart
 exec thunderbird
 exec feedreader
 exec keepassxc
 exec quodlibet
+exec redshift
