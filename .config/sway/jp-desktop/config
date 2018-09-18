@@ -1,0 +1,12 @@
+# Output configuration
+#output HDMI-A-1 pos 0,0 scale 2
+#output DP-1 pos 128,1080
+#output DVI-D-1 pos 2048,1080
+output DP-1 pos 0,0
+output DVI-D-1 pos 1920,0
+
+# Autostart
+exec thunderbird
+exec feedreader
+exec keepassxc
+exec quodlibet
