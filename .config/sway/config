@@ -69,35 +69,20 @@ bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
 bindsym $mod+y workspace "1:"; exec $browser
 bindsym $mod+Shift+Y exec firefox-nightly -P yt
 
-# Screenshots
-bindsym Print       exec gnome-screenshot
-bindsym Shift+Print exec gnome-screenshot -w
-
-# Volume controls
-bindsym Mod1+F5 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
-bindsym Mod1+F6 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
-bindsym Mod1+F3 exec --no-startup-id pamixer -t   && pkill -RTMIN+1 i3blocks
-
-# Music player controls
-bindsym KP_Left  exec --no-startup-id quodlibet --force-previous
-bindsym KP_Begin exec --no-startup-id quodlibet --run --play-pause
-bindsym KP_Right exec --no-startup-id quodlibet --next
-bindsym KP_Up    exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume +5 && pkill -RTMIN+3 i3blocks
-bindsym KP_Down  exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume -5 && pkill -RTMIN+3 i3blocks
-
-# Display brightness controls
-bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 10
+# Screenshots - TODO: figure out why these don't work (maybe the keysym is wrong?)
+bindsym Print       exec grim $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
+#bindsym Mod1+Print  exec grim -o <active_workspace> | grim -g - $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
+bindsym Shift+Print exec slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
 
 # Notifications
 bindsym Control+Space exec makoctl dismiss
 bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Lock screen
-bindsym Control+Mod1+l exec ~/.local/bin/scripts/lock-way
+bindsym Control+Mod1+l exec ~/.local/bin/scripts/lock
 
 # ... automatically when suspending
-exec swayidle before-sleep ~/.local/bin/scripts/lock-way
+exec swayidle before-sleep ~/.local/bin/scripts/lock
 
 # Poweroff, reboot prompts
 bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
@@ -113,10 +98,10 @@ bindsym Control+$mod+j move workspace to output down
 bindsym Control+$mod+k move workspace to output right
 bindsym Control+$mod+l move workspace to output up
 
-# kill focused window
+# Kill focused window
 bindsym $mod+Shift+q kill
 
-# start your launcher
+# Start your launcher
 bindsym $mod+d exec $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
@@ -126,10 +111,10 @@ bindsym $mod+d exec $menu
 # mouse button for dragging.
 floating_modifier $mod normal
 
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# exit sway (logs you out of your wayland session)
+# Exit sway (logs you out of your wayland session)
 bindsym $mod+Shift+e exit
 
 # Move your focus around with $mod+[h|j|k|l], like vim
@@ -154,7 +139,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1   workspace "1:"
 bindsym $mod+2   workspace "2:"
 bindsym $mod+3   workspace "3:"
@@ -178,10 +163,7 @@ bindsym $mod+F10 workspace number 20
 bindsym $mod+F11 workspace "21:"
 bindsym $mod+F12 workspace "42:"
 
-bindsym KP_Divide   workspace prev_on_output
-bindsym KP_Multiply workspace next_on_output
-
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1    move container to workspace "1:"
 bindsym $mod+Shift+2    move container to workspace "2:"
 bindsym $mod+Shift+3    move container to workspace "3:"
