@@ -57,9 +57,11 @@ for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 for_window [app_id="^gnome-calculator$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
-for_window [app_id="^nautilus$" title="^nautilus$"] floating enable # Nautilus typeahead popup
+# Nautilus typeahead popup
+for_window [app_id="^nautilus$" title="^nautilus$"] floating enable
 for_window [app_id="^keepassxc$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
-for_window [app_id="^\.$"] floating enable # gtk-rs programs have this id by default
+# gtk-rs programs have this id by default
+for_window [app_id="^\.$"] floating enable
 
 # Program shortcuts
 bindsym $mod+Return exec $term
