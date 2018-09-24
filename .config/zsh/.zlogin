@@ -15,11 +15,6 @@ if [[ -z "$DISPLAY" && "$XDG_VTNR" -eq 1 ]]; then
     export QT_WAYLAND_FORCE_DPI=96
     export SDL_VIDEODRIVER=wayland
     export _JAVA_AWT_WM_NONREPARENTING=1
-    
-    # Keyboard layout (does not seem to work via config)
-    export XKB_DEFAULT_LAYOUT=de
-    export XKB_DEFAULT_VARIANT=nodeadkeys
-    export XKB_DEFAULT_OPTIONS=compose:caps
 
     # Start sway
     exec sway > ~/.local/share/sway.out 2> ~/.local/share/sway.err

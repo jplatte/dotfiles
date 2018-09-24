@@ -33,7 +33,7 @@ exec signal-desktop
 exec riot-desktop
 
 # Input device configuration
-input "*" {
+input * {
     xkb_layout de
     xkb_variant nodeadkeys
     xkb_options compose:caps
