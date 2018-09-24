@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Linux
-Font=Hasklig,11.5,-1,5,50,0,0,0,0,0
+Font=Iosevka SS07,11.5,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=2
