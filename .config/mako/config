@@ -5,6 +5,9 @@ margin=4
 border-size=2
 border-color=#333333
 
+# Only for desktop, ignored when no such output exists
+output=DP-1
+
 background-color=#666666
 text-color=#FFFFFF
 
