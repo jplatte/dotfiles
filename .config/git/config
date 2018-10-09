@@ -10,3 +10,5 @@
 	amend = commit --amend
 [color]
 	ui = auto
+[help]
+	autocorrect = 20
