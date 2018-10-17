@@ -64,6 +64,13 @@ for_window [app_id="^keepassxc$" title="^KeePassXC-Browser: Zugriff bestätigen$
 # gtk-rs programs have this id by default
 for_window [app_id="^\.$"] floating enable
 
+# Other window-specific settings
+for_window [class="^Signal$"] opacity 0.9
+for_window [class="^Riot$"] opacity 0.9
+for_window [app_id="^nautilus$"] opacity 0.9
+for_window [app_id="^gedit$"] opacity 0.9
+for_window [app_id="^keepassxc$" title="KeePassXC$"] opacity 0.9
+
 # Program shortcuts
 bindsym $mod+Return exec $term
 bindsym $mod+n exec $file_manager
