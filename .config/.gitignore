@@ -2,7 +2,6 @@
 
 !.gitignore
 
-!compton.conf
 !konsolerc
 !pikaur.conf
 !redshift.conf
