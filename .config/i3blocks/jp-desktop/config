@@ -9,7 +9,7 @@ label=
 instance=mouse_hidpp_battery_0
 interval=60
 
-[df-btrfs]
+[df]
 label= 1 
 instance=/
 
