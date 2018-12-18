@@ -11,4 +11,4 @@
 [color]
 	ui = auto
 [help]
-	autocorrect = 20
+	autocorrect = 10
