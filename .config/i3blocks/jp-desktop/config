@@ -1,20 +1,24 @@
 command=~/.local/bin/blocks/$BLOCK_NAME
 interval=60
 
-[cpu-temp]
-interval=15
+#[cpu-temp]
+#interval=15
 
-[upower]
+[upower-symbolic]
 label=
 instance=mouse_hidpp_battery_0
 interval=60
 
 [df]
-label= 1 
+label= / 
 instance=/
 
+[df]
+label=  
+instance=/home/jplatte
+
 [df-btrfs]
-label= 2 
+label= 
 instance=/mnt/daten
 
 [eth-primary]
