@@ -3,28 +3,27 @@
     "modules-left": [
         "sway/workspaces"
     ],
-    "modules-center": [
-        "sway/window"
-    ],
     "modules-right": [
-        "battery",
-        "cpu",
-        "memory",
-        "network#wifi",
+        "custom/mouse-bat",
+        "custom/df-root",
+        "custom/df-home",
+        "custom/df-daten",
+        "network#ethernet",
         "pulseaudio",
+        "custom/quodlibet-volume",
         "clock#date",
         "clock#clock"
     ],
     "sway/workspaces": {
         "format": "{name}"
     },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity} %",
+    "custom/mouse-bat": {
+        "exec": "~/.config/waybar/modules/mouse-bat.sh",
+        "return-type": "json",
+        "interval": 60,
+        "format": " {icon}",
         "format-icons": [
+            "",
             "",
             "",
             "",
@@ -32,15 +31,24 @@
             ""
         ]
     },
-    "cpu": {
-        "format": " {usage}%"
+    "custom/df-root": {
+        "exec": "~/.config/waybar/modules/df.sh /",
+        "interval": 60,
+        "format": " / {}"
     },
-    "memory": {
-        "format": " {} %"
+    "custom/df-home": {
+        "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
+        "interval": 60,
+        "format": "  {}"
     },
-    "network#wifi": {
-        "interface": "wlp2s0",
-        "format-wifi": " {essid} ({signalStrength}%)",
+    "custom/df-daten": {
+        "exec": "~/.config/waybar/modules/df-btrfs.sh /mnt/daten",
+        "interval": 60,
+        "format": " {}"
+    },
+    "network#ethernet": {
+        "interface": "enp3s0",
+        "format-ethernet": " {ipaddr}/{cidr}",
         "format-disconnected": " Disconnected"
     },
     "pulseaudio": {
@@ -60,6 +68,11 @@
             ]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/quodlibet-volume": {
+        "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
+        "interval": 60,
+        "format": " {} %"
     },
     "clock#date": {
         "format": " {:%d.%m}"
