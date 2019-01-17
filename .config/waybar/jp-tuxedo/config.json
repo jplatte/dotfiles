@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["battery", "cpu", "memory", "network#wifi", "pulseaudio", "clock#date", "clock#clock"],
+    "sway/workspaces": {
+        "format": "{name}"
+    },
+    "clock#date": {
+        "format": " {:%d.%m}"
+    },
+    "clock#clock": {
+        "format": " {:%H∶%M}"
+    },
+    "cpu": {
+        "format": " {usage}%"
+    },
+    "memory": {
+        "format": " {} %"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity} %",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network#wifi": {
+        "interface": "wlp2s0",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume} %",
+        "format-bluetooth": "{icon} {volume} %",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    }
+}

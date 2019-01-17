@@ -32,6 +32,9 @@
 !sway
 !sway/**
 
+!waybar
+!waybar/**
+
 !zsh
 !zsh/.zlogin
 !zsh/.zlogout
