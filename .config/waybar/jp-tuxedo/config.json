@@ -8,8 +8,6 @@
     ],
     "modules-right": [
         "battery",
-        "cpu",
-        "memory",
         "network#wifi",
         "pulseaudio",
         "clock#date",
@@ -31,12 +29,6 @@
             "",
             ""
         ]
-    },
-    "cpu": {
-        "format": " {usage}%"
-    },
-    "memory": {
-        "format": " {} %"
     },
     "network#wifi": {
         "interface": "wlp2s0",
