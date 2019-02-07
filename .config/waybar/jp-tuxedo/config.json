@@ -8,8 +8,11 @@
     ],
     "modules-right": [
         "battery",
+        "custom/df-root",
+        "custom/df-home",
         "network#wifi",
         "pulseaudio",
+        "custom/quodlibet-volume",
         "clock#date",
         "clock#clock"
     ],
@@ -18,8 +21,7 @@
     },
     "battery": {
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 30
         },
         "format": "{icon} {capacity} %",
         "format-icons": [
@@ -30,8 +32,18 @@
             ""
         ]
     },
+    "custom/df-root": {
+        "exec": "~/.config/waybar/modules/df.sh /",
+        "interval": 60,
+        "format": " / {}"
+    },
+    "custom/df-home": {
+        "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
+        "interval": 60,
+        "format": "  {}"
+    },
     "network#wifi": {
-        "interface": "wlp2s0",
+        "interface": "wlp1s0",
         "format-wifi": " {essid} ({signalStrength}%)",
         "format-disconnected": " Disconnected"
     },
@@ -52,6 +64,11 @@
             ]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/quodlibet-volume": {
+        "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
+        "interval": 60,
+        "format": " {} %"
     },
     "clock#date": {
         "format": " {:%d.%m}"
