@@ -6,21 +6,5 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 }
 
 # Display brightness controls
-bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 10
-
-# Volume controls
-bindsym Mod1+F5 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
-bindsym Mod1+F6 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
-bindsym Mod1+F3 exec --no-startup-id pamixer -t   && pkill -RTMIN+1 i3blocks
-
-# Keypad music player controls
-bindsym KP_Left  exec --no-startup-id ~/.local/bin/scripts/quodlibet-control force-previous
-bindsym KP_Begin exec --no-startup-id ~/.local/bin/scripts/quodlibet-control play-pause || quodlibet --run --play
-bindsym KP_Right exec --no-startup-id ~/.local/bin/scripts/quodlibet-control next
-bindsym KP_Up    exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume +5 && pkill -RTMIN+3 i3blocks
-bindsym KP_Down  exec --no-startup-id ~/.local/bin/scripts/quodlibet-volume -5 && pkill -RTMIN+3 i3blocks
-
-# Keypad workspace switching
-bindsym KP_Divide   workspace prev_on_output
-bindsym KP_Multiply workspace next_on_output
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 5

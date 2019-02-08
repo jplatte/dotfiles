@@ -23,13 +23,3 @@ exec feedreader
 exec keepassxc
 exec quodlibet
 exec redshift
-
-# Volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute        exec --no-startup-id pamixer -t   && pkill -RTMIN+1 i3blocks
-
-# Music player controls
-bindsym XF86AudioPrev exec --no-startup-id ~/.local/bin/scripts/quodlibet-control force-previous
-bindsym XF86AudioPlay exec --no-startup-id ~/.local/bin/scripts/quodlibet-control play-pause || quodlibet --run --play
-bindsym XF86AudioNext exec --no-startup-id ~/.local/bin/scripts/quodlibet-control next

@@ -23,7 +23,6 @@ workspace_layout default
 #popup_during_fullscreen leave_fullscreen # TODO
 
 # Autostart
-exec --no-startup-id sh -c 'nmcli monitor | while read _; do pkill -RTMIN+4 i3blocks; done >/dev/null'
 exec --no-startup-id mako
 exec --no-startup-id waybar -c ~/.config/waybar/`hostname`/config.json
 
@@ -100,6 +99,16 @@ bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
 bindsym Control+$mod+x exec ~/.local/bin/scripts/zenity-poweroff
 bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
 bindsym Control+$mod+s exec ~/.local/bin/scripts/zenity-suspend
+
+# Volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute        exec --no-startup-id pamixer -t
+
+# Keypad music player controls
+bindsym KP_Left  exec --no-startup-id ~/.local/bin/scripts/quodlibet-control force-previous
+bindsym KP_Begin exec --no-startup-id ~/.local/bin/scripts/quodlibet-control play-pause || quodlibet --run --play
+bindsym KP_Right exec --no-startup-id ~/.local/bin/scripts/quodlibet-control next
 
 # Move workspace between outputs
 bindsym $mod+x move workspace to output right
