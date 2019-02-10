@@ -2,7 +2,6 @@
 
 !.gitignore
 
-!konsolerc
 !pikaur.conf
 !redshift.conf
 !user-dirs.dirs
