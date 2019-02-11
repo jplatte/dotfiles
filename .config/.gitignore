@@ -2,6 +2,7 @@
 
 !.gitignore
 
+!mimeapps.list
 !pikaur.conf
 !redshift.conf
 !user-dirs.dirs
