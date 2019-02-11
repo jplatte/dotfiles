@@ -7,6 +7,9 @@
 !user-dirs.dirs
 !user-dirs.locale
 
+!alacritty
+!alacritty/*
+
 !dunst
 !dunst/*
 

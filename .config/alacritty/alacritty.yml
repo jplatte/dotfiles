@@ -1,0 +1,41 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# See https://github.com/jwilm/alacritty/blob/master/alacritty.yml
+
+window:
+  padding:
+    x: 0
+    y: 0
+
+font:
+  # Normal (roman) font face
+  normal:
+    family: Iosevka SS06
+
+  # Bold font face
+  bold:
+    family: Iosevka SS06
+
+  # Italic font face
+  italic:
+    family: Iosevka SS06
+
+  # Point size
+  size: 12.0
+
+background_opacity: 0.8
+
+mouse:
+  url:
+    # URL modifiers
+    #
+    # These are the modifiers that need to be held down for opening URLs when clicking
+    # on them. The available modifiers are documented in the key binding section.
+    modifiers: Control
+
+cursor:
+  style: Underline
+
+# TODO: Remove if https://github.com/jwilm/alacritty/pull/2099 is merged
+key_bindings:
+  - { key: Back,   mods: Control, chars: "\x17"  }
+  - { key: Delete, mods: Control, chars: "\x1bD" }
