@@ -38,6 +38,5 @@ cursor:
 key_bindings:
   - { key: Add,    mods: Control, action: IncreaseFontSize }
   - { key: Minus,  mods: Control, action: DecreaseFontSize }
-  # TODO: Remove if https://github.com/jwilm/alacritty/pull/2099 is merged
   - { key: Back,   mods: Control, chars: "\x17"            }
   - { key: Delete, mods: Control, chars: "\x1bD"           }
