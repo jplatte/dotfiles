@@ -1,5 +1,5 @@
 # Input device configuration
-input "2:7:SynPS/2_Synaptics_TouchPad" {
+input "1102:4618:MSFT0001:00_044E:120A_Touchpad" {
     natural_scroll enabled
     scroll_method two_finger
     tap enabled
