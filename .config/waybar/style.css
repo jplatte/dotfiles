@@ -1,4 +1,6 @@
 @define-color red #c43030;
+@define-color yellow #eebf13;
+@define-color green #3c913b;
 
 * {
     border: none;
@@ -48,7 +50,7 @@ window#waybar {
     border-bottom-color: @brightred;
 }
 
-#battery, #cpu, #memory, #network, #pulseaudio, #clock, #custom-mouse-bat, #custom-df-root, #custom-df-home, #custom-df-daten, #custom-quodlibet-volume {
+#battery, #cpu, #memory, #network, #pulseaudio, #clock, #custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home, #custom-df-daten, #custom-quodlibet-volume {
     padding: 3px 5px;
     margin: 0 4px;
     color: #aaa;
@@ -61,12 +63,22 @@ window#waybar {
     border-bottom-color: white;
 }
 
+#custom-wifi.good-link-q {
+    color: @green;
+    border-bottom-color: @green;
+}
+
+#custom-wifi.bad-link-q {
+    color: @yellow;
+    border-bottom-color: @yellow;
+}
+
 #battery.warning:not(.charging) {
     color: @red;
     border-bottom-color: @red;
 }
 
-#network.disconnected {
+#network.disconnected, #custom-wifi.disconnected {
     color: @red;
     border-bottom-color: @red;
 }

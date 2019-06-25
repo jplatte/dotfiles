@@ -10,7 +10,7 @@
         "battery",
         "custom/df-root",
         "custom/df-home",
-        "network#wifi",
+        "custom/wifi",
         "pulseaudio",
         "custom/quodlibet-volume",
         "clock#date",
@@ -21,7 +21,7 @@
     },
     "battery": {
         "states": {
-            "warning": 30
+            "warning": 25
         },
         "format": "{icon} {capacity} %",
         "format-icons": [
@@ -42,10 +42,12 @@
         "interval": 60,
         "format": "  {}"
     },
-    "network#wifi": {
-        "interface": "wlp1s0",
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-disconnected": " Disconnected"
+    "custom/wifi": {
+        "exec": "~/.config/waybar/modules/wifi.sh wlp1s0",
+        "format": " {}",
+        "interval": "once",
+        "signal": 1,
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon} {volume} %",
