@@ -1,6 +1,8 @@
-@define-color red #c43030;
-@define-color yellow #eebf13;
 @define-color green #3c913b;
+@define-color yellow #eebf13;
+@define-color red #c43030;
+
+@define-color brightred #f53c3c;
 
 * {
     border: none;
@@ -43,14 +45,14 @@ window#waybar {
     border-bottom-color: @red;
 }
 
-@define-color brightred #f53c3c;
 #workspaces button.urgent.focused {
     color: @brightred;
     background: linear-gradient(to top, rgba(245, 60, 60, 0.2), rgba(245, 60, 60, 0));
     border-bottom-color: @brightred;
 }
 
-#battery, #cpu, #memory, #network, #pulseaudio, #clock, #custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home, #custom-df-daten, #custom-quodlibet-volume {
+#cpu, #memory, #pulseaudio, #clock, #custom-battery, #custom-wifi, #custom-mouse-bat,
+#custom-df-root, #custom-df-home, #custom-df-daten, #custom-quodlibet-volume {
     padding: 3px 5px;
     margin: 0 4px;
     color: #aaa;
@@ -58,6 +60,9 @@ window#waybar {
 }
 
 #battery.charging,
+#custom-battery.charging,
+#custom-battery.full,
+#custom-battery.error,
 #custom-mouse-bat.charging {
     color: white;
     border-bottom-color: white;
@@ -68,17 +73,15 @@ window#waybar {
     border-bottom-color: @green;
 }
 
+#custom-battery.low:not(.charging),
 #custom-wifi.bad-link-q {
     color: @yellow;
     border-bottom-color: @yellow;
 }
 
-#battery.warning:not(.charging) {
-    color: @red;
-    border-bottom-color: @red;
-}
-
-#network.disconnected, #custom-wifi.disconnected {
+#custom-battery.very-low:not(.charging),
+#network.disconnected,
+#custom-wifi.disconnected {
     color: @red;
     border-bottom-color: @red;
 }

@@ -7,7 +7,7 @@
         "sway/window"
     ],
     "modules-right": [
-        "battery",
+        "custom/battery",
         "custom/df-root",
         "custom/df-home",
         "custom/wifi",
@@ -19,11 +19,11 @@
     "sway/workspaces": {
         "format": "{name}"
     },
-    "battery": {
-        "states": {
-            "warning": 25
-        },
-        "format": "{icon} {capacity} %",
+    "custom/battery": {
+        "exec": "~/.config/waybar/modules/battery.sh BAT0",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{icon} {}",
         "format-icons": [
             "",
             "",
