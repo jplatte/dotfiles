@@ -11,24 +11,22 @@ network_name=$(
 
 if [[ -z $network_name ]]; then
     printf 'disconnected\n\ndisconnected\n'
+    jq -nc '{ "text": "disconnected", "class": "disconnected" }'
 else
-    freq=$(iwconfig | grep -q 'Frequency:2' && printf '2.4' || printf '5')
+    freq=$(iwconfig "$iface" | grep -q 'Frequency:2' && printf '2.4' || printf '5')
 
     link_quality=$(
-        iwconfig \
+        iwconfig "$iface" \
             | grep 'Link Quality' \
             | sed 's/\s\+Link Quality=\([0-9]\+\/[0-9]\+\).*/\1/'
     )
 
     if [[ $(bc <<< "scale=2; $link_quality < 0.6") == 1 ]]; then
-        class='good-link-q'
+        class='bad-link-q'
     else
-        color='bad-link-q'
+        class='good-link-q'
     fi
 
-    freq_text=$(printf '%s\u2009GHz' "$freq")
-    echo "$network_name ($freq_text)"
-    echo
-    echo "$class"
-    #printf '%s (%s\u2009GHz)\n\n%s' "$network_name" "$freq" "$class"
+    text=$(printf '%s (%s\u2009GHz)' "$network_name" "$freq")
+    jq -nc '{ "text": $ARGS.named.text, "class": $ARGS.named.class }' --arg text "$text" --arg class "$class"
 fi

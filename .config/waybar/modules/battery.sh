@@ -18,8 +18,7 @@ else
 fi
 
 if [[ "$status" == 'Charging' || "$status" == 'Discharging' ]]; then
-    power_raw=$(cat power_now)
-    power=$(bc <<< "scale=1; $power_raw / 10^6")
+    power=$(cat power_now | awk '{ printf "%.1f", $1 * 1e-6 }')
     energy_d=$((100 * $(cat energy_now) / $(cat energy_full_design)))
 
     text+=$(printf '%s\u2009W, %s\u2009%%' "$power" "$energy_d")
