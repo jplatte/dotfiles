@@ -1,7 +1,7 @@
 font=Encode Sans 11
 width=320
 padding=8
-margin=4
+margin=8
 border-size=2
 border-color=#333333
 default-timeout=5000
