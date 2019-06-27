@@ -35,12 +35,12 @@
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": " / {}"
+        "format": " / {}"
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "  {}"
+        "format": "  {}"
     },
     "custom/wifi": {
         "exec": "~/.config/waybar/modules/wifi.sh wlp1s0",
