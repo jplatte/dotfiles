@@ -1,5 +1,6 @@
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
+application/x-cd-image=gnome-disk-image-mounter.desktop;
 audio/mpeg=mpv.desktop
 audio/x-opus+ogg=mpv.desktop
 image/bmp=eog.desktop
@@ -29,3 +30,7 @@ video/mp4=mpv.desktop
 video/webm=mpv.desktop
 x-scheme-handler/http=firefox-nightly.desktop
 x-scheme-handler/https=firefox-nightly.desktop
+
+[Added Associations]
+application/pdf=libreoffice-draw.desktop;
+image/png=gimp.desktop;
