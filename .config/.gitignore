@@ -35,6 +35,9 @@
 !sway
 !sway/**
 
+!task
+!task/taskrc
+
 !waybar
 !waybar/**
 

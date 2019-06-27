@@ -22,4 +22,5 @@ export LESSHISTFILE=-
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+export TASKRC="$XDG_CONFIG_HOME"/task/taskrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
