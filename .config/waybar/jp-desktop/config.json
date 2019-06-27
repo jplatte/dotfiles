@@ -34,17 +34,17 @@
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": " / {}"
+        "format": "<span color='#888'> /</span> {}"
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "  {}"
+        "format": "<span color='#888'> </span> {}"
     },
     "custom/df-daten": {
         "exec": "~/.config/waybar/modules/df-btrfs.sh /mnt/daten",
         "interval": 60,
-        "format": " {}"
+        "format": "<span color='#888'></span> {}"
     },
     "network#ethernet": {
         "interface": "enp3s0",
@@ -52,9 +52,9 @@
         "format-disconnected": " Disconnected"
     },
     "pulseaudio": {
-        "format": "{icon} {volume} %",
-        "format-bluetooth": "{icon} {volume} %",
-        "format-muted": "",
+        "format": "<span color='#888'>{icon}</span> {volume} %",
+        "format-bluetooth": "<span color='#888'>{icon}</span> {volume} %",
+        "format-muted": "<span color='#888'</span>",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
@@ -72,12 +72,12 @@
     "custom/quodlibet-volume": {
         "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
         "interval": 60,
-        "format": " {} %"
+        "format": "<span color='#888'></span> {} %"
     },
     "clock#date": {
-        "format": " {:%d.%m}"
+        "format": "<span color='#888'></span> {:%d.%m}"
     },
     "clock#clock": {
-        "format": " {:%H∶%M}"
+        "format": "<span color='#888'></span> {:%H∶%M}"
     }
 }

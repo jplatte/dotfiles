@@ -23,7 +23,7 @@
         "exec": "~/.config/waybar/modules/battery.sh BAT0",
         "return-type": "json",
         "interval": 5,
-        "format": "{icon} {}",
+        "format": "<span color='#888'>{icon}</span> {}",
         "format-icons": [
             "",
             "",
@@ -35,24 +35,25 @@
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": " / {}"
+        "format": "<span color='#888'> /</span> {}"
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "  {}"
+        "format": "<span color='#888'> </span> {}"
     },
     "custom/wifi": {
         "exec": "~/.config/waybar/modules/wifi.sh wlp1s0",
-        "format": " {}",
+        "return-type": "json",
+        "format": "<span color='#888'></span> {}",
         "interval": "once",
         "signal": 1,
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon} {volume} %",
-        "format-bluetooth": "{icon} {volume} %",
-        "format-muted": "",
+        "format": "<span color='#888'>{icon}</span> {volume} %",
+        "format-bluetooth": "<span color='#888'>{icon}</span> {volume} %",
+        "format-muted": "<span color='#888'</span>",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
@@ -70,12 +71,12 @@
     "custom/quodlibet-volume": {
         "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
         "interval": 60,
-        "format": " {} %"
+        "format": "<span color='#888'></span> {} %"
     },
     "clock#date": {
-        "format": " {:%d.%m}"
+        "format": "<span color='#888'></span> {:%d.%m}"
     },
     "clock#clock": {
-        "format": " {:%H∶%M}"
+        "format": "<span color='#888'></span> {:%H∶%M}"
     }
 }
