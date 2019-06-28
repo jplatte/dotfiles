@@ -10,7 +10,6 @@ network_name=$(
 )
 
 if [[ -z $network_name ]]; then
-    printf 'disconnected\n\ndisconnected\n'
     jq -nc '{ "text": "disconnected", "class": "disconnected" }'
 else
     freq=$(iwconfig "$iface" | grep -q 'Frequency:2' && printf '2.4' || printf '5')
