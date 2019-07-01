@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-right": [
+        "custom/battery",
+        "custom/df-root",
+        "custom/df-home",
+        "network",
+        "pulseaudio",
+        "clock#date",
+        "clock#clock",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "format": "{name}"
+    },
+    "custom/battery": {
+        "exec": "~/.config/waybar/modules/battery.sh BAT1",
+        "return-type": "json",
+        "interval": 15,
+        "signal": 2,
+        "format": "<span color='#888'>{icon}</span> {}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "format-ethernet": "",
+        "format-wireless": "",
+        "format-linked": "",
+        "format-disconnected": ""
+    },
+    "custom/mouse-bat": {
+        "exec": "~/.config/waybar/modules/mouse-bat.sh",
+        "return-type": "json",
+        "interval": 60,
+        "format": "<span color='#888'></span> {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/df-root": {
+        "exec": "~/.config/waybar/modules/df.sh /",
+        "interval": 60,
+        "format": "<span color='#888'> /</span> {}"
+    },
+    "custom/df-home": {
+        "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
+        "interval": 60,
+        "format": "<span color='#888'> </span> {}"
+    },
+    "pulseaudio": {
+        "format": "<span color='#888'>{icon}</span> {volume} %",
+        "format-bluetooth": "<span color='#888'>{icon}/span> {volume} %",
+        "format-muted": "<span color='#888'></span>",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "clock#date": {
+        "format": "<span color='#888'></span> {:%d.%m}"
+    },
+    "clock#clock": {
+        "format": "<span color='#888'></span> {:%H∶%M}"
+    }
+}

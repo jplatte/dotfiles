@@ -49,7 +49,7 @@ window#waybar {
 }
 
 #cpu, #memory, #pulseaudio, #clock, #custom-battery, #custom-wifi, #custom-mouse-bat,
-#custom-df-root, #custom-df-home, #custom-df-daten, #custom-quodlibet-volume {
+#custom-df-root, #custom-df-home, #custom-df-daten, #network, #custom-quodlibet-volume, #tray {
     padding: 3px 5px;
     margin: 0 4px;
     color: #ccc;
