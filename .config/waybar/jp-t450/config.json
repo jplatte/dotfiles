@@ -4,7 +4,9 @@
         "sway/workspaces"
     ],
     "modules-right": [
-        "custom/battery",
+        "custom/mouse-bat",
+        "custom/battery#BAT0",
+        "custom/battery#BAT1",
         "custom/df-root",
         "custom/df-home",
         "network",
@@ -16,7 +18,35 @@
     "sway/workspaces": {
         "format": "{name}"
     },
-    "custom/battery": {
+    "custom/mouse-bat": {
+        "exec": "~/.config/waybar/modules/mouse-bat.sh",
+        "return-type": "json",
+        "interval": 60,
+        "format": " {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/battery#BAT0": {
+        "exec": "~/.config/waybar/modules/battery.sh BAT0",
+        "return-type": "json",
+        "interval": 15,
+        "signal": 2,
+        "format": "<span color='#888'>{icon}</span> {}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/battery#BAT1": {
         "exec": "~/.config/waybar/modules/battery.sh BAT1",
         "return-type": "json",
         "interval": 15,
