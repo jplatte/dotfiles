@@ -23,13 +23,10 @@ workspace_layout default
 #popup_during_fullscreen leave_fullscreen # TODO
 
 # Autostart
-exec mako
 exec waybar -c ~/.config/waybar/`hostname`/config.json
 exec sh -c "nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done >/dev/null"
-
+exec mako
 exec $browser
-exec signal-desktop
-exec riot-desktop
 
 # Input device configuration
 input * {

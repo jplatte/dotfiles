@@ -13,6 +13,12 @@ output "Goldstar Company Ltd LG TV 0x00000101" {
 
 output eDP-1 pos 0 720
 
+# Autostart
+exec signal-desktop
+exec riot-desktop
+exec keepassxc
+exec redshift
+
 # Display brightness controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 5
