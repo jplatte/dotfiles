@@ -56,10 +56,7 @@ window#waybar {
     border-bottom: 3px solid #aaa;
 }
 
-#battery.charging,
-#custom-battery.charging,
-#custom-battery.error,
-#custom-mouse-bat.charging {
+#custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging {
     border-bottom-color: white;
 }
 
@@ -67,14 +64,11 @@ window#waybar {
     border-bottom-color: @green;
 }
 
-#custom-battery.low:not(.charging),
-#custom-wifi.bad-link-q {
+#custom-battery.low:not(.charging), #custom-wifi.bad-link-q {
     border-bottom-color: @yellow;
 }
 
-#custom-battery.very-low:not(.charging),
-#network.disconnected,
-#custom-wifi.disconnected {
+#custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
     border-bottom-color: @red;
 }
 
