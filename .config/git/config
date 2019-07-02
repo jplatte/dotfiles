@@ -1,8 +1,6 @@
 [user]
 	email = jplatte+git@posteo.de
 	name = Jonas Platte
-[push]
-	default = simple
 [alias]
 	st = status
 	ff = merge --ff-only
