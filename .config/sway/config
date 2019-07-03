@@ -80,7 +80,7 @@ bindsym $mod+Shift+Y exec firefox-nightly -P yt
 # => Capture of all screens
 bindsym Print         exec grim $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
 # => Select a window to capture
-bindsym Mod1+Print    exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | select(.pid and .visible) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
+bindsym Mod1+Print    exec swaymsg -t get_tree | jq -r '.. | ((.nodes?, .floating_nodes?) // empty)[] | select(.pid and .visible) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
 # Select a screen to capture
 bindsym Shift+Print   exec swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'Screenshot_%Y-%m-%d_%H%M%S.png')
 # => Select a region to capture
