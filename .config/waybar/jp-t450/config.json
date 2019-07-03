@@ -10,10 +10,10 @@
         "custom/df-root",
         "custom/df-home",
         "network",
+        "custom/owncloud",
         "pulseaudio",
         "clock#date",
-        "clock#clock",
-        "tray"
+        "clock#clock"
     ],
     "sway/workspaces": {
         "format": "{name}"
@@ -22,7 +22,7 @@
         "exec": "~/.config/waybar/modules/mouse-bat.sh",
         "return-type": "json",
         "interval": 60,
-        "format": " {icon}",
+        "format": "<span color='#888'></span> {icon}",
         "format-icons": [
             "",
             "",
@@ -30,7 +30,8 @@
             "",
             "",
             ""
-        ]
+        ],
+        "on-click": "solaar"
     },
     "custom/battery#BAT0": {
         "exec": "~/.config/waybar/modules/battery.sh BAT0",
@@ -63,22 +64,15 @@
     "network": {
         "format-ethernet": "",
         "format-wireless": "",
-        "format-linked": "",
-        "format-disconnected": ""
+        "format-linked": "<span color='#888'></span>",
+        "format-disconnected": "",
+        "on-click": "alacritty -e nmtui"
     },
-    "custom/mouse-bat": {
-        "exec": "~/.config/waybar/modules/mouse-bat.sh",
-        "return-type": "json",
-        "interval": 60,
-        "format": "<span color='#888'></span> {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+    "custom/owncloud": {
+        "exec": "pgrep owncloud || printf '\n\ninactive'",
+        "format": "",
+        "interval": 15,
+        "on-click": "owncloud"
     },
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",

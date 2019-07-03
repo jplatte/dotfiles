@@ -49,7 +49,8 @@ window#waybar {
 }
 
 #cpu, #memory, #pulseaudio, #clock, #custom-battery, #custom-wifi, #custom-mouse-bat,
-#custom-df-root, #custom-df-home, #custom-df-daten, #network, #custom-quodlibet-volume, #tray {
+#custom-df-root, #custom-df-home, #custom-df-daten, #network, #custom-owncloud,
+#custom-quodlibet-volume {
     padding: 3px 5px;
     margin: 0 4px;
     color: #ccc;
@@ -70,6 +71,10 @@ window#waybar {
 
 #custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
     border-bottom-color: @red;
+}
+
+#custom-owncloud.inactive {
+    color: #888;
 }
 
 #clock.clock {
