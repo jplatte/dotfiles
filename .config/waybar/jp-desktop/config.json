@@ -21,7 +21,7 @@
         "exec": "~/.config/waybar/modules/mouse-bat.sh",
         "return-type": "json",
         "interval": 60,
-        "format": " {icon}",
+        "format": "<span color='#888'></span> {icon}",
         "format-icons": [
             "",
             "",
