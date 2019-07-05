@@ -35,3 +35,4 @@ x-scheme-handler/https=firefox-nightly.desktop
 application/pdf=libreoffice-draw.desktop;
 image/png=gimp.desktop;
 image/svg+xml=org.gnome.gedit.desktop;inkscape.desktop;
+text/css=org.gnome.gedit.desktop;
