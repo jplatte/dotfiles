@@ -36,7 +36,7 @@ exec gnome-keyring-daemon -sdc ssh
 exec owncloud
 exec solaar
 exec thunderbird
-exec alacritty -e sh -c 'sleep 0.1; swaymsg move container to workspace "22:"; while true; do tasksh; clear; done'
+exec alacritty -e sh -c 'swaymsg move container to workspace "22:"; while true; do tasksh; clear; done'
 exec alacritty -e ~/.local/bin/scripts/monitor-setup
 
 # Output configuration
