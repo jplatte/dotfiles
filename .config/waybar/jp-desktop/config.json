@@ -48,8 +48,8 @@
     },
     "network#ethernet": {
         "interface": "enp3s0",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "format-disconnected": " Disconnected"
+        "format-ethernet": "<span color='#888'></span> {ipaddr}/{cidr}",
+        "format-disconnected": "<span color='#888'></span> Disconnected"
     },
     "pulseaudio": {
         "format": "<span color='#888'>{icon}</span> {volume} %",
