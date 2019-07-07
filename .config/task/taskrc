@@ -13,6 +13,13 @@
 # Files
 data.location=~/.local/share/task
 
+# Synchronization
+taskd.server=tasks.jonasplatte.de:53589
+taskd.credentials=elliot/jplatte/15f5b42e-bd71-4b6e-8ff3-66c450f21144
+taskd.ca=~/.local/share/task/ca.cert.pem
+taskd.key=~/.local/share/task/self.key.pem
+taskd.certificate=~/.local/share/task/self.cert.pem
+
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
 #include /usr/share/doc/task/rc/light-256.theme
