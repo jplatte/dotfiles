@@ -11,7 +11,7 @@ fi
 if [[ "$status" == 'Charging' ]]; then
     class='charging'
 elif [[ "$status" == 'Discharging' || "$status" == 'Not charging' ]]; then
-    # Do nothing
+    class='' # Do nothing
 elif [[ "$status" == 'Full' ]]; then
     text=$(printf '<span color="#888">\uf0e7</span> ')
     class='full'
