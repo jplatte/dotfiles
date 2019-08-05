@@ -2,6 +2,10 @@
 typeset -U path
 path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 
+# Overwrite zsh defaults for up and down (make it cycle the history unfiltered)
+[[ -n "${key[Up]}"   ]] && bindkey "${key[Up]}"   up-line-or-history
+[[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" down-line-or-history
+
 # Aliases
 alias ip='ip -c'
 alias diff='diff --color=auto'
