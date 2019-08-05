@@ -4,6 +4,7 @@
         "sway/workspaces"
     ],
     "modules-right": [
+        "custom/pacman",
         "custom/mouse-bat",
         "custom/df-root",
         "custom/df-home",
@@ -16,6 +17,13 @@
     ],
     "sway/workspaces": {
         "format": "{name}"
+    },
+    "custom/pacman": {
+        "format": " {}",
+        "exec": "~/.config/waybar/modules/pacman.sh",
+        "interval": "once",
+        "signal": 7,
+        "on-click": "alacritty -e bash -c 'pikaur -Syu; pkill -SIGRTMIN+7 waybar'"
     },
     "custom/mouse-bat": {
         "exec": "~/.config/waybar/modules/mouse-bat.sh",
@@ -30,27 +38,32 @@
             "",
             ""
         ],
-        "on-click": "solaar"
+        "on-click": "solaar",
+        "tooltip": false
     },
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": "<span color='#888'> /</span> {}"
+        "format": "<span color='#888'> /</span> {}",
+        "tooltip": false
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "<span color='#888'> </span> {}"
+        "format": "<span color='#888'> </span> {}",
+        "tooltip": false
     },
     "custom/df-daten": {
         "exec": "~/.config/waybar/modules/df-btrfs.sh /mnt/daten",
         "interval": 60,
-        "format": "<span color='#888'></span> {}"
+        "format": "<span color='#888'></span> {}",
+        "tooltip": false
     },
     "network#ethernet": {
         "interface": "enp3s0",
         "format-ethernet": "<span color='#888'></span> {ipaddr}/{cidr}",
-        "format-disconnected": "<span color='#888'></span> Disconnected"
+        "format-disconnected": "<span color='#888'></span> Disconnected",
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "<span color='#888'>{icon}</span> {volume} %",
@@ -68,17 +81,28 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "tooltip": false
     },
     "custom/quodlibet-volume": {
-        "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
+        "exec": "~/.local/bin/scripts/quodlibet-volume",
         "interval": 60,
-        "format": "<span color='#888'></span> {} %"
+        "signal": 10,
+        "format": "<span color='#888'></span> {} %",
+        "on-click": "~/.local/bin/scripts/quodlibet-control play-pause",
+        "on-click-right": "~/.local/bin/scripts/quodlibet-control stop",
+        "on-scroll-up": "~/.local/bin/scripts/quodlibet-volume +5; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-down": "~/.local/bin/scripts/quodlibet-volume -5; pkill -SIGRTMIN+10 waybar",
+        "tooltip": false
     },
     "clock#date": {
-        "format": "<span color='#888'></span> {:%d.%m}"
+        "format": "<span color='#888'></span> {:%d.%m}",
+        "tooltip": false
     },
     "clock#clock": {
-        "format": "<span color='#888'></span> {:%H∶%M}"
+        "format": "<span color='#888'></span> {:%H∶%M}",
+        "tooltip": false
     }
 }

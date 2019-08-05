@@ -7,6 +7,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/pacman",
         "custom/battery",
         "custom/df-root",
         "custom/df-home",
@@ -18,6 +19,13 @@
     ],
     "sway/workspaces": {
         "format": "{name}"
+    },
+    "custom/pacman": {
+        "format": " {}",
+        "exec": "~/.config/waybar/modules/pacman.sh",
+        "interval": "once",
+        "signal": 7,
+        "on-click": "alacritty -e bash -c 'pikaur -Syu; pkill -SIGRTMIN+7 waybar'"
     },
     "custom/battery": {
         "exec": "~/.config/waybar/modules/battery.sh BAT0",
@@ -31,24 +39,28 @@
             "",
             "",
             ""
-        ]
+        ],
+        "tooltip": false
     },
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": "<span color='#888'> /</span> {}"
+        "format": "<span color='#888'> /</span> {}",
+        "tooltip": false
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "<span color='#888'> </span> {}"
+        "format": "<span color='#888'> </span> {}",
+        "tooltip": false
     },
     "custom/wifi": {
         "exec": "~/.config/waybar/modules/wifi.sh wlp1s0",
         "return-type": "json",
-        "format": "<span color='#888'></span> {}",
         "interval": "once",
         "signal": 1,
+        "format": "<span color='#888'></span> {}",
+        "on-click": "alacritty -e nmtui",
         "tooltip": false
     },
     "pulseaudio": {
@@ -67,17 +79,23 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "tooltip": false
     },
     "custom/quodlibet-volume": {
         "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
         "interval": 60,
-        "format": "<span color='#888'></span> {} %"
+        "format": "<span color='#888'></span> {} %",
+        "tooltip": false
     },
     "clock#date": {
-        "format": "<span color='#888'></span> {:%d.%m}"
+        "format": "<span color='#888'></span> {:%d.%m}",
+        "tooltip": false
     },
     "clock#clock": {
-        "format": "<span color='#888'></span> {:%H∶%M}"
+        "format": "<span color='#888'></span> {:%H∶%M}",
+        "tooltip": false
     }
 }

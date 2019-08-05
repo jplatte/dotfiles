@@ -50,7 +50,7 @@ window#waybar {
 
 #cpu, #memory, #pulseaudio, #clock, #custom-battery, #custom-wifi, #custom-mouse-bat,
 #custom-df-root, #custom-df-home, #custom-df-daten, #network, #custom-owncloud,
-#custom-quodlibet-volume {
+#custom-quodlibet-volume, #custom-pacman {
     padding: 3px 5px;
     margin: 0 4px;
     color: #ccc;

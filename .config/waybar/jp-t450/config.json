@@ -4,6 +4,7 @@
         "sway/workspaces"
     ],
     "modules-right": [
+        "custom/pacman",
         "custom/mouse-bat",
         "custom/battery#BAT0",
         "custom/battery#BAT1",
@@ -18,6 +19,13 @@
     "sway/workspaces": {
         "format": "{name}"
     },
+    "custom/pacman": {
+        "format": " {}",
+        "exec": "~/.config/waybar/modules/pacman.sh",
+        "interval": "once",
+        "signal": 7,
+        "on-click": "alacritty -e bash -c 'pikaur -Syu; pkill -SIGRTMIN+7 waybar'"
+    },
     "custom/mouse-bat": {
         "exec": "~/.config/waybar/modules/mouse-bat.sh",
         "return-type": "json",
@@ -31,58 +39,65 @@
             "",
             ""
         ],
-        "on-click": "solaar"
+        "on-click": "solaar",
+        "tooltip": false
     },
     "custom/battery#BAT0": {
         "exec": "~/.config/waybar/modules/battery.sh BAT0",
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "<span color='#888'>{icon}</span> {}",
+        "format": "<span color='#888'>{icon}¹</span> {}",
         "format-icons": [
             "",
             "",
             "",
             "",
             ""
-        ]
+        ],
+        "tooltip": false
     },
     "custom/battery#BAT1": {
         "exec": "~/.config/waybar/modules/battery.sh BAT1",
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "<span color='#888'>{icon}</span> {}",
+        "format": "<span color='#888'>{icon}²</span> {}",
         "format-icons": [
             "",
             "",
             "",
             "",
             ""
-        ]
+        ],
+        "tooltip": false
     },
     "network": {
         "format-ethernet": "",
         "format-wireless": "",
         "format-linked": "<span color='#888'></span>",
         "format-disconnected": "",
-        "on-click": "alacritty -e nmtui"
+        "on-click": "alacritty -e nmtui",
+        "tooltip": false
     },
     "custom/owncloud": {
         "exec": "pgrep owncloud || printf '\n\ninactive'",
         "format": "",
         "interval": 15,
-        "on-click": "owncloud"
+        "on-click": "owncloud",
+        "tooltip": false
     },
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
         "interval": 60,
-        "format": "<span color='#888'> /</span> {}"
+        "format": "<span color='#888'> /</span> {}",
+        "tooltip": false
     },
     "custom/df-home": {
         "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
         "interval": 60,
-        "format": "<span color='#888'> </span> {}"
+        "format": "<span color='#888'> </span> {}",
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "<span color='#888'>{icon}</span> {volume} %",
@@ -100,12 +115,17 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "tooltip": false
     },
     "clock#date": {
-        "format": "<span color='#888'></span> {:%d.%m}"
+        "format": "<span color='#888'></span> {:%d.%m}",
+        "tooltip": false
     },
     "clock#clock": {
-        "format": "<span color='#888'></span> {:%H∶%M}"
+        "format": "<span color='#888'></span> {:%H∶%M}",
+        "tooltip": false
     }
 }
