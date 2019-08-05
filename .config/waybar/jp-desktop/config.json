@@ -29,7 +29,8 @@
             "",
             "",
             ""
-        ]
+        ],
+        "on-click": "solaar"
     },
     "custom/df-root": {
         "exec": "~/.config/waybar/modules/df.sh /",
