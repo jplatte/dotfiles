@@ -47,7 +47,7 @@
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "<span color='#888'>{icon} ¹</span> {}",
+        "format": "<span color='#888'>{icon} ₁</span> {}",
         "format-icons": [
             "",
             "",
@@ -62,7 +62,7 @@
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "<span color='#888'>{icon} ²</span> {}",
+        "format": "<span color='#888'>{icon} ₂</span> {}",
         "format-icons": [
             "",
             "",
