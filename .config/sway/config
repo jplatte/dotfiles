@@ -73,6 +73,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+n exec $file_manager
 bindsym $mod+g exec gedit
 bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
+bindsym $mod+Mod1+c exec ~/.local/bin/scripts/open_code_workspace ~/Projekte
 bindsym $mod+y workspace "1:"; exec $browser
 bindsym $mod+Shift+Y exec firefox-nightly -P yt
 
