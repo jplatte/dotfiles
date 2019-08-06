@@ -1,17 +1,8 @@
 *
 
-!.gitignore
-
-!.xbindkeysrc
-!.xserverrc
-!.xinitrc
-
-!.zlogin
-!.zlogout
-!.zshenv
-!.zshrc
-
 !.config
 
 !.ssh
 !.ssh/config
+
+!.gitignore
