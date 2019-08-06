@@ -75,7 +75,7 @@
     "network": {
         "format-ethernet": "",
         "format-wireless": "",
-        "format-linked": "<span color='#888'></span>",
+        "format-linked": "",
         "format-disconnected": "",
         "on-click": "alacritty -e nmtui",
         "tooltip": false

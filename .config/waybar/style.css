@@ -70,6 +70,7 @@ window#waybar {
 }
 
 #custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
+    color: @red;
     border-bottom-color: @red;
 }
 
