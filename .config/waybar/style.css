@@ -57,6 +57,11 @@ window#waybar {
     border-bottom: 3px solid #aaa;
 }
 
+#pulseaudio.muted, #custom-wifi.disabled, #custom-owncloud.inactive {
+    color: #888;
+    border-bottom-color: #888;
+}
+
 #custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging {
     border-bottom-color: white;
 }
@@ -72,10 +77,6 @@ window#waybar {
 #custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
     color: @red;
     border-bottom-color: @red;
-}
-
-#custom-owncloud.inactive {
-    color: #888;
 }
 
 #clock.clock {

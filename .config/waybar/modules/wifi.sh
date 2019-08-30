@@ -1,5 +1,8 @@
 #!/bin/bash
-[[ $(nmcli -f wifi -t g s) == 'disabled' ]] && exit 0
+if [[ $(nmcli -f wifi -t g s) == 'disabled' ]]; then
+    jq -nc '{ "text": "", "class": "disabled" }'
+    exit 0
+fi
 
 iface="$1"
 
@@ -10,7 +13,7 @@ network_name=$(
 )
 
 if [[ -z $network_name ]]; then
-    jq -nc '{ "text": "disconnected", "class": "disconnected" }'
+    jq -nc '{ "text": " disconnected", "class": "disconnected" }'
 else
     freq=$(iwconfig "$iface" | grep -q 'Frequency:2' && printf '2.4' || printf '5')
 
@@ -26,6 +29,6 @@ else
         class='good-link-q'
     fi
 
-    text=$(printf '%s (%s\u2009GHz)' "$network_name" "$freq")
+    text=$(printf '<span color="#888"></span> %s (%s\u2009GHz)' "$network_name" "$freq")
     jq -nc '{ "text": $ARGS.named.text, "class": $ARGS.named.class }' --arg text "$text" --arg class "$class"
 fi

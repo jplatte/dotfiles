@@ -60,7 +60,7 @@
         "return-type": "json",
         "interval": "once",
         "signal": 1,
-        "format": "<span color='#888'></span> {}",
+        "format": "{}",
         "on-click": "alacritty -e nmtui",
         "tooltip": false
     },
