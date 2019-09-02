@@ -9,7 +9,7 @@
         "custom/df-root",
         "custom/df-home",
         "custom/df-daten",
-        "network#ethernet",
+        "network",
         "pulseaudio",
         "custom/quodlibet-volume",
         "clock#date",
@@ -60,10 +60,11 @@
         "format": "<span color='#888'></span> {}",
         "tooltip": false
     },
-    "network#ethernet": {
+    "network": {
         "interface": "enp3s0",
-        "format-ethernet": "<span color='#888'></span> {ipaddr}/{cidr}",
-        "format-disconnected": "<span color='#888'></span> Disconnected",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "on-click": "alacritty -e nmtui",
         "tooltip": false
     },
     "pulseaudio": {
