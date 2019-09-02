@@ -8,10 +8,11 @@ input "1102:4618:MSFT0001:00_044E:120A_Touchpad" {
 # Output device configuration
 output "Goldstar Company Ltd LG TV 0x00000101" {
     pos 1000 0
-    scale 3
+    res 1920x1080
+    #scale 3
 }
 
-output eDP-1 pos 0 720
+output eDP-1 pos 0 1080
 
 # Autostart
 exec signal-desktop
@@ -20,5 +21,5 @@ exec keepassxc
 exec redshift
 
 # Display brightness controls
-bindsym XF86MonBrightnessUp   exec --no-startup-id light -pA 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -pU 5
+bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
