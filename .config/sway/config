@@ -42,7 +42,7 @@ output * bg ~/Bilder/Wallpaper/FLATzero_2880x1800.jpg fill
 # Default workspaces for common programs
 assign [class="^Signal$"] 2:
 assign [class="^Riot$"] 2:
-assign [class="^Thunderbird$"] 3:
+assign [app_id="^thunderbird$"] 3:
 assign [app_id="^feedreader$"] 3:
 assign [class="^Steam$"] 11:
 assign [class="^Wine$"] 12:

@@ -3,7 +3,7 @@ output HDMI-A-1 pos 0,0
 output DVI-D-1 pos 1920,0
 
 # Layout defaults
-for_window [class="^Thunderbird$"] layout tabbed
+for_window [app_id="^thunderbird$"] layout tabbed
 for_window [app_id="^feedreader$"] layout tabbed
 for_window [class="^Steam$"] layout tabbed
 
