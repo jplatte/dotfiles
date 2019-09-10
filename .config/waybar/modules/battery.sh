@@ -16,7 +16,7 @@ elif [[ "$status" == 'Full' ]]; then
     text=$(printf '<span color="#888">\uf0e7</span> ')
     class='full'
 else
-    text="[$status]"
+    text="[$status] "
     class='error'
 fi
 
@@ -24,9 +24,10 @@ energy_d=$((100 * $(cat energy_now) / $(cat energy_full_design)))
 
 if [[ "$status" == 'Charging' || "$status" == 'Discharging' ]]; then
     power=$(cat power_now | awk '{ printf "%.1f", $1 * 1e-6 }')
-
     text+=$(printf '%s\u2009W, ' "$power")
+fi
 
+if [[ "$status" == 'Discharging' ]]; then
     if [[ "$energy_d" -lt 10 ]]; then
         class='very-low'
     elif [[ "$energy_d" -lt 20 ]]; then
