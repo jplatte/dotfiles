@@ -26,6 +26,8 @@ workspace_layout default
 exec waybar -c ~/.config/waybar/`hostname`/config.json
 exec sh -c "nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done >/dev/null"
 exec mako
+# => Round volume to a multiple of 5
+exec paximer --set-volume $(pamixer --get-volume | awk '{ print int(($1 / 5) + 0.5) * 5 }')
 exec $browser
 
 # Input device configuration
