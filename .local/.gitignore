@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+
+!/share
+!/share/applications
+!/share/applications/userapp-ff-nightly.desktop

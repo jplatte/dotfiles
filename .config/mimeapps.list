@@ -28,8 +28,8 @@ message/rfc822=thunderbird.desktop
 text/plain=org.gnome.gedit.desktop
 video/mp4=mpv.desktop
 video/webm=mpv.desktop
-x-scheme-handler/http=firefox-nightly.desktop
-x-scheme-handler/https=firefox-nightly.desktop
+x-scheme-handler/http=userapp-ff-nightly.desktop
+x-scheme-handler/https=userapp-ff-nightly.desktop
 
 [Added Associations]
 application/pdf=libreoffice-draw.desktop;
