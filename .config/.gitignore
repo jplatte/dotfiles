@@ -2,44 +2,43 @@
 
 !.gitignore
 
-!mimeapps.list
-!pikaur.conf
-!redshift.conf
-!user-dirs.dirs
-!user-dirs.locale
+!/mimeapps.list
+!/pikaur.conf
+!/redshift.conf
+!/user-dirs.dirs
+!/user-dirs.locale
 
-!alacritty
-!alacritty/*
+!/alacritty.yml
 
-!dunst
-!dunst/*
+!/dunst
+!/dunst/*
 
-!fontconfig
-!fontconfig/*
+!/fontconfig
+!/fontconfig/*
 
-!git
-!git/*
+!/git
+!/git/*
 
-!gtk-3.0
-!gtk-3.0/*
+!/gtk-3.0
+!/gtk-3.0/*
 
-!mako
-!mako/*
+!/mako
+!/mako/*
 
-!nvim
-!nvim/init.vim
+!/nvim
+!/nvim/init.vim
 
-!sway
-!sway/**
+!/sway
+!/sway/**
 
-!task
-!task/taskrc
+!/task
+!/task/taskrc
 
-!waybar
-!waybar/**
+!/waybar
+!/waybar/**
 
-!zsh
-!zsh/.zlogin
-!zsh/.zlogout
-!zsh/.zshenv
-!zsh/.zshrc
+!/zsh
+!/zsh/.zlogin
+!/zsh/.zlogout
+!/zsh/.zshenv
+!/zsh/.zshrc
