@@ -9,7 +9,6 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 # Aliases
 alias ip='ip -c'
 alias diff='diff --color=auto'
-alias rg='rg --no-ignore-vcs'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
 alias sudo='sudo '
