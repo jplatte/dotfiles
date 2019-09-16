@@ -1,5 +1,4 @@
 export EDITOR=nvim
-export MOZ_USE_XINPUT2=1
 
 # gnome keyring
 if [ -n "$DESKTOP_SESSION" ];then
