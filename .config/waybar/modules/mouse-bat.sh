@@ -3,8 +3,8 @@
 info_line=$(solaar show | grep Battery)
 percentage=$(sed 's/\s*Battery: \([0-9]\+\)%.*/\1/' <<< $info_line)
 
-if ( grep -q recharging <<< $info_line ); then
-    printf '{ "percentage": %s, "class": "charging" }' "$percentage"
+if ( grep -q recharging <<< "$info_line" ); then
+    jq -nc '{ "percentage": $ARGS.named.p, "class": "charging" }' --argjson p "$percentage"
 else
-    printf '{ "percentage": %s }' "$percentage"
+    jq -nc '{ "percentage": $ARGS.named.p }' --argjson p "$percentage"
 fi
