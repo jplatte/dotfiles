@@ -8,15 +8,13 @@ bindsym --no-warn $mod+2   workspace number 2
 bindsym --no-warn $mod+F1  workspace number 11
 bindsym --no-warn $mod+F2  workspace number 12
 bindsym --no-warn $mod+F3  workspace number 13
-bindsym --no-warn $mod+F10 workspace number 20
-bindsym --no-warn $mod+F12 workspace "22:"
+bindsym --no-warn $mod+F10 workspace "20:"
 
 bindsym --no-warn $mod+Shift+2    move container to workspace number 2
 bindsym --no-warn $mod+Shift+F1   move container to workspace number 11
 bindsym --no-warn $mod+Shift+F2   move container to workspace number 12
 bindsym --no-warn $mod+Shift+F3   move container to workspace number 13
-bindsym --no-warn $mod+Shift+F10  move container to workspace number 20
-bindsym --no-warn $mod+Shift+F12  move container to workspace "22:"
+bindsym --no-warn $mod+Shift+F10  move container to workspace "20:"
 
 # Input configuration
 # TODO: MX Master wheel speed
@@ -36,7 +34,7 @@ exec gnome-keyring-daemon -sdc ssh
 exec owncloud
 exec solaar
 exec thunderbird
-exec alacritty -e sh -c 'swaymsg move container to workspace "22:"; while true; do tasksh; clear; done'
+exec alacritty -e sh -c 'swaymsg move container to workspace "20:"; while true; do tasksh; clear; done'
 exec alacritty -e ~/.local/bin/scripts/monitor-setup
 
 # Output configuration
