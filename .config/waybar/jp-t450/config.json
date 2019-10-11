@@ -89,13 +89,13 @@
         "tooltip": false
     },
     "custom/df-root": {
-        "exec": "~/.config/waybar/modules/df.sh /",
+        "exec": "~/.config/waybar/modules/df-btrfs.sh /",
         "interval": 60,
         "format": "<span color='#888'> /</span> {}",
         "tooltip": false
     },
     "custom/df-home": {
-        "exec": "~/.config/waybar/modules/df.sh /home/jplatte",
+        "exec": "~/.config/waybar/modules/df-btrfs.sh /home/jplatte",
         "interval": 60,
         "format": "<span color='#888'> </span> {}",
         "tooltip": false
