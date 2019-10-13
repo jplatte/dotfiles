@@ -17,7 +17,7 @@ workspace "42:" output DVI-D-1
 # Autostart
 exec signal-desktop
 exec riot-desktop
-exec thunderbird
+exec env GDK_BACKEND=wayland thunderbird
 exec feedreader
 exec keepassxc
 exec quodlibet
