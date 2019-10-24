@@ -2,7 +2,7 @@
 set $mod Mod4
 set $menu rofi -m $(xrandr --listmonitors | tail +$(( $(swaymsg -t get_outputs | jq 'map(.focused) | index(true)') + 2 )) | head -1 | cut -d' ' -f6) -no-cycle -matching fuzzy -theme Arc-Dark -show-icons -drun-icon-theme Arc -modi drun -show drun -run-command 'swaymsg exec -- {cmd}'
 set $term alacritty
-set $browser env GDK_BACKEND=wayland firefox-nightly -P nightly
+set $browser env MOZ_ENABLE_WAYLAND=true firefox-nightly -P nightly
 set $file_manager nautilus
 
 # Colors               (border  bg      text    indicator child_border)
