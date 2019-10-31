@@ -33,7 +33,7 @@ x-scheme-handler/https=userapp-ff-nightly.desktop
 
 [Added Associations]
 application/pdf=libreoffice-draw.desktop;
+image/jpeg=gimp.desktop;
 image/png=gimp.desktop;
 image/svg+xml=org.gnome.gedit.desktop;inkscape.desktop;
 text/css=org.gnome.gedit.desktop;
-image/jpeg=gimp.desktop;
