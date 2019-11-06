@@ -10,3 +10,7 @@
 	ui = auto
 [help]
 	autocorrect = 10
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
