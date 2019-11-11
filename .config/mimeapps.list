@@ -25,6 +25,7 @@ image/x-portable-pixmap=eog.desktop
 image/x-xbitmap=eog.desktop
 image/x-xpixmap=eog.desktop
 message/rfc822=thunderbird.desktop
+text/html=userapp-ff-nightly.desktop
 text/plain=org.gnome.gedit.desktop
 video/mp4=mpv.desktop
 video/webm=mpv.desktop
