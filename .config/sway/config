@@ -49,6 +49,7 @@ assign [app_id="^feedreader$"] 3:
 assign [class="^Steam$"] 11:
 assign [class="^Wine$"] 12:
 assign [app_id="^keepassxc$" title="KeePassXC$"] 21:
+assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] 21:
 assign [app_id="^quodlibet$"] 42:
 assign [app_id="^io.github.quodlibet.QuodLibet$"] 42:
 
