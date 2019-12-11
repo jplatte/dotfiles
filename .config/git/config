@@ -14,3 +14,8 @@
 	gpgSign = true
 [tag]
 	gpgSign = true
+[sendemail]
+	smtpserver = posteo.de
+	smtpuser = jplatte@posteo.de
+	smtpencryption = tls
+	smtpserverport = 587
