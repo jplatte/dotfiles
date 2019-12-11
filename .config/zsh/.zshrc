@@ -7,8 +7,9 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
 [[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" down-line-or-history
 
 # Aliases
-alias ip='ip -c'
+alias cal='cal -3'
 alias diff='diff --color=auto'
+alias ip='ip -c'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
 alias sudo='sudo '
