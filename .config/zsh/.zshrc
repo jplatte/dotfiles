@@ -20,8 +20,5 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # roxterm and lxterm don't indicate 256color support
 #export TERM=xterm-256color
 
-# Make `npm install -g` user-wide instead of system-wide
-NPM_PACKAGES="$HOME/.npm-packages"
-
 # Dotnet telemetry?!
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

@@ -25,6 +25,9 @@
 !/mako
 !/mako/*
 
+!/npm
+!/npm/npmrc
+
 !/nvim
 !/nvim/init.vim
 
