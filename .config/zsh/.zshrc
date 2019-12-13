@@ -1,6 +1,6 @@
 # PATH
 typeset -U path
-path=($path[@] ~/.local/bin ~/.cargo/bin ~/.npm-packages/bin)
+path=($path[@] ~/.local/bin ~/.cargo/bin ~/.local/share/npm/bin)
 
 # Overwrite zsh defaults for up and down (make it cycle the history unfiltered)
 [[ -n "${key[Up]}"   ]] && bindkey "${key[Up]}"   up-line-or-history
