@@ -77,7 +77,7 @@ bindsym $mod+n exec $file_manager
 bindsym $mod+g exec gedit
 bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
 bindsym $mod+Mod1+c exec ~/.local/bin/scripts/open_code_workspace ~/Projekte
-bindsym $mod+y workspace "1:"; exec $browser
+bindsym $mod+y workspace "1:龜"; exec $browser
 bindsym $mod+Shift+Y exec firefox-nightly -P yt
 
 # Screenshots
@@ -166,7 +166,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Switch to workspace
-bindsym $mod+1   workspace "1:"
+bindsym $mod+1   workspace "1:龜"
 bindsym $mod+2   workspace "2:"
 bindsym $mod+3   workspace "3:"
 bindsym $mod+4   workspace number 4
@@ -190,7 +190,7 @@ bindsym $mod+F11 workspace "21:"
 bindsym $mod+F12 workspace "42:"
 
 # Move focused container to workspace
-bindsym $mod+Shift+1    move container to workspace "1:"
+bindsym $mod+Shift+1    move container to workspace "1:龜"
 bindsym $mod+Shift+2    move container to workspace "2:"
 bindsym $mod+Shift+3    move container to workspace "3:"
 bindsym $mod+Shift+4    move container to workspace number 4
