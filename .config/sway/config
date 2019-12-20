@@ -189,6 +189,11 @@ bindsym $mod+F10 workspace number 20
 bindsym $mod+F11 workspace "21:"
 bindsym $mod+F12 workspace "42:"
 
+# Switch to previous / next workspace using horizontal mouse wheel
+# the + before button6 / button7 seems to be mandatory
+bindsym --whole-window --border +button6 exec ~/.cargo/bin/i3-workspace-scroll next
+bindsym --whole-window --border +button7 exec ~/.cargo/bin/i3-workspace-scroll prev
+
 # Move focused container to workspace
 bindsym $mod+Shift+1    move container to workspace "1:龜"
 bindsym $mod+Shift+2    move container to workspace "2:"
