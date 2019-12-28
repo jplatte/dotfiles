@@ -48,28 +48,28 @@ assign [app_id="^thunderbird$"] 3:
 assign [app_id="^feedreader$"] 3:
 assign [class="^Steam$"] 11:
 assign [class="^Wine$"] 12:
-assign [app_id="^keepassxc$" title="KeePassXC$"] 21:
 assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] 21:
-assign [app_id="^quodlibet$"] 42:
 assign [app_id="^io.github.quodlibet.QuodLibet$"] 42:
 
 # Layout defaults
+for_window [app_id="^feedreader$"] layout tabbed
 for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 for_window [app_id="^gnome-calculator$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 # Nautilus typeahead popup
 for_window [app_id="^nautilus$" title="^nautilus$"] floating enable
-for_window [app_id="^keepassxc$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
+for_window [app_id="^org.keepassxc.KeePassXC$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
 # gtk-rs programs have this id by default
 for_window [app_id="^\.$"] floating enable
+for_window [class="^Steam$"] layout tabbed
 
 # Other window-specific settings
 for_window [class="^Signal$"] opacity 0.9
 for_window [class="^Riot$"] opacity 0.9
-for_window [app_id="^nautilus$"] opacity 0.9
-for_window [app_id="^gedit$"] opacity 0.9
-for_window [app_id="^keepassxc$" title="KeePassXC$"] opacity 0.9
+for_window [app_id="^org.gnome.Nautilus$"] opacity 0.9
+for_window [app_id="^org.gnome.gedit$"] opacity 0.9
+for_window [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] opacity 0.9
 
 # Program shortcuts
 bindsym $mod+Return exec $term
