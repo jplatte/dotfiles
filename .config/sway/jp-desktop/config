@@ -3,11 +3,16 @@ output HDMI-A-1 pos 0,0
 output DVI-D-1 pos 1920,0
 
 # Default outputs for workspaces
-workspace "1:" output HDMI-A-1
+workspace "1:龜" output HDMI-A-1
 workspace "2:" output HDMI-A-1
 workspace "3:" output HDMI-A-1
 workspace "21:" output DVI-D-1
 workspace "42:" output DVI-D-1
+
+# Switch to previous / next workspace using horizontal mouse wheel
+# the + before button6 / button7 seems to be mandatory
+bindsym --whole-window --border +button6 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window --border +button7 exec ~/.cargo/bin/i3-workspace-scroll next
 
 # Autostart
 exec signal-desktop
