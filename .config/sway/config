@@ -193,6 +193,8 @@ bindsym $mod+F12 workspace "42:"
 
 # Switch to previous / next workspace using horizontal mouse wheel
 # the + before button6 / button7 seems to be mandatory
+bindsym --whole-window --border --input-device=1133:16449:Logitech_MX_Master +button6 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window --border --input-device=1133:16449:Logitech_MX_Master +button7 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --border --input-device=1133:16480:Logitech_MX_Master +button6 exec ~/.cargo/bin/i3-workspace-scroll prev
 bindsym --whole-window --border --input-device=1133:16480:Logitech_MX_Master +button7 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --border --input-device=1133:16489:Logitech_MX_Master_2S +button6 exec ~/.cargo/bin/i3-workspace-scroll next
