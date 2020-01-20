@@ -8,6 +8,8 @@
 	amend = commit --amend
 [color]
 	ui = auto
+[advice]
+    detachedHead = false
 [help]
 	autocorrect = 10
 [commit]
