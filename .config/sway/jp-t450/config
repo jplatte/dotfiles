@@ -33,7 +33,7 @@ output "Sharp Corporation SHARP HDMI 0x00000001" {
 
 #exec kanshi
 exec gnome-keyring-daemon -sdc ssh
-exec owncloud
+exec owncloud --logfile /dev/null
 exec solaar
 exec thunderbird
 exec alacritty -e ~/.local/bin/scripts/monitor-setup

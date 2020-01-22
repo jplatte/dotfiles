@@ -85,7 +85,7 @@
         "exec": "pgrep owncloud || printf '\n\ninactive'",
         "format": "",
         "interval": 15,
-        "on-click": "owncloud",
+        "on-click": "owncloud --logfile /dev/null",
         "tooltip": false
     },
     "custom/df-root": {
