@@ -200,6 +200,10 @@ bindsym --whole-window --border --input-device=1133:16480:Logitech_MX_Master +bu
 bindsym --whole-window --border --input-device=1133:16489:Logitech_MX_Master_2S +button6 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --border --input-device=1133:16489:Logitech_MX_Master_2S +button7 exec ~/.cargo/bin/i3-workspace-scroll prev
 
+bindsym --input-device=1133:16449:Logitech_MX_Master    Control+Mod1+Tab move workspace to output right
+bindsym --input-device=1133:16480:Logitech_MX_Master    Control+Mod1+Tab move workspace to output right
+bindsym --input-device=1133:16489:Logitech_MX_Master_2S Control+Mod1+Tab move workspace to output right
+
 # Move focused container to workspace
 bindsym $mod+Shift+1    move container to workspace "1:龜"
 bindsym $mod+Shift+2    move container to workspace "2:"
