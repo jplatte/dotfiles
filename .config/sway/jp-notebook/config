@@ -18,7 +18,7 @@ output eDP-1 pos 0 1080
 exec signal-desktop
 exec riot-desktop
 exec keepassxc
-exec redshift
+exec redshift -m wayland
 
 # Display brightness controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
