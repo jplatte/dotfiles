@@ -16,4 +16,3 @@ exec env GDK_BACKEND=wayland thunderbird
 exec feedreader
 exec keepassxc
 exec quodlibet
-exec redshift -m wayland
