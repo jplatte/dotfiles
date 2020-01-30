@@ -26,21 +26,20 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
 }
 
-output "Sharp Corporation SHARP HDMI 0x00000001" {
-    position 1600 0
-    scale 2
-}
-
-#exec kanshi
 exec gnome-keyring-daemon -sdc ssh
 exec owncloud --logfile /dev/null
 exec solaar
-exec thunderbird
 exec alacritty -e ~/.local/bin/scripts/monitor-setup
 
 # Output configuration
 output DP-4 pos 0,0
 output DP-3 pos 1920,0
+
+output eDP-1 pos 0,0
+output "Sharp Corporation SHARP HDMI 0x00000001" {
+    position 1600 0
+    scale 2
+}
 
 # Default outputs for workspaces
 workspace "1:龜" output DP-4
