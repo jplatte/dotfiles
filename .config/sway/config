@@ -72,6 +72,7 @@ for_window [app_id="^org.gnome.Nautilus$"] opacity 0.9
 for_window [app_id="^org.gnome.gedit$"] opacity 0.9
 for_window [app_id="^file-roller$"] opacity 0.9
 for_window [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] opacity 0.9
+for_window [app_id="^io.github.quodlibet.QuodLibet$"] opacity 0.9
 for_window [app_id="^zenity$"] opacity 0.9
 
 # Program shortcuts
