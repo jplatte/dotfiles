@@ -122,7 +122,7 @@
         "tooltip": false
     },
     "clock#date": {
-        "format": "<span color='#888'></span> {:%d.%m}",
+        "format": "<span color='#888'></span> {:%d.%m.}",
         "tooltip": false
     },
     "clock#clock": {
