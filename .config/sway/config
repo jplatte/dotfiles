@@ -17,7 +17,7 @@ font pango:Encode Sans 11
 # Window borders
 default_border pixel 1
 default_floating_border pixel 1
-hide_edge_borders smart
+hide_edge_borders --i3 smart
 
 workspace_layout default
 #popup_during_fullscreen leave_fullscreen # TODO

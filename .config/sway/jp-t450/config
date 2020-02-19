@@ -37,7 +37,7 @@ output DP-3 pos 1920,0
 
 output eDP-1 pos 0,0
 output "Sharp Corporation SHARP HDMI 0x00000001" {
-    position 1600 0
+    position 1366 0
     scale 2
 }
 
