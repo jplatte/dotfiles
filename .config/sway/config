@@ -53,6 +53,8 @@ assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] 21:
 assign [app_id="^io.github.quodlibet.QuodLibet$"] 42:
 
 # Layout defaults
+for_window [app_id="^firefox$"] layout tabbed
+for_window [app_id="^thunderbird$"] layout tabbed
 for_window [app_id="^feedreader$"] layout tabbed
 for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
