@@ -2,6 +2,7 @@
 assign [app_id="^firefox$"] 1:龜
 assign [app_id="^desktopclient.owncloud.com.owncloud$"] 19:
 
+for_window [class="^MATLAB "] layout tabbed
 for_window [app_id="^virt-manager$"] layout tabbed
 
 # Custom workspace names
