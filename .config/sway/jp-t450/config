@@ -42,5 +42,8 @@ output "Sharp Corporation SHARP HDMI 0x00000001" {
     scale 2
 }
 
+bindswitch --reload lid:on output eDP-1 disable
+bindswitch --reload lid:off output eDP-1 enable
+
 # Default outputs for workspaces
 workspace "1:龜" output DP-4
