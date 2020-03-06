@@ -14,5 +14,4 @@ exec signal-desktop
 exec riot-desktop
 exec env GDK_BACKEND=wayland thunderbird
 exec feedreader
-exec keepassxc
 exec quodlibet

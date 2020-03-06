@@ -17,7 +17,6 @@ output eDP-1 pos 0 1080
 # Autostart
 exec signal-desktop
 exec riot-desktop
-exec keepassxc
 
 # Display brightness controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
