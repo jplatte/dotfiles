@@ -186,7 +186,7 @@ bindsym $mod+0   workspace number 10
 bindsym $mod+F1  workspace "11:"
 bindsym $mod+F2  workspace "12:"
 bindsym $mod+F3  workspace "13:"
-bindsym $mod+F4  workspace number 14
+bindsym $mod+F4  workspace "14:"
 bindsym $mod+F5  workspace number 15
 bindsym $mod+F6  workspace number 16
 bindsym $mod+F7  workspace number 17
@@ -223,7 +223,7 @@ bindsym $mod+Shift+0    move container to workspace number 10
 bindsym $mod+Shift+F1   move container to workspace "11:"
 bindsym $mod+Shift+F2   move container to workspace "12:"
 bindsym $mod+Shift+F3   move container to workspace "13:"
-bindsym $mod+Shift+F4   move container to workspace number 14
+bindsym $mod+Shift+F4   move container to workspace "14:"
 bindsym $mod+Shift+F5   move container to workspace number 15
 bindsym $mod+Shift+F6   move container to workspace number 16
 bindsym $mod+Shift+F7   move container to workspace number 17
