@@ -1,24 +1,16 @@
+# Custom workspace names
+set $ws2 number 2
+set $ws11 number 11
+set $ws12 number 12
+set $ws13 number 13
+set $ws19 "19:"
+
 # Application specific configuration
-assign [app_id="^firefox$"] 1:龜
-assign [app_id="^desktopclient.owncloud.com.owncloud$"] 19:
+assign [app_id="^firefox$"] $ws1
+assign [app_id="^desktopclient.owncloud.com.owncloud$"] $ws19
 
 for_window [class="^MATLAB "] layout tabbed
 for_window [app_id="^virt-manager$"] layout tabbed
-
-# Custom workspace names
-bindsym --no-warn $mod+2   workspace number 2
-bindsym --no-warn $mod+F1  workspace number 11
-bindsym --no-warn $mod+F2  workspace number 12
-bindsym --no-warn $mod+F3  workspace number 13
-bindsym --no-warn $mod+F9  workspace "19:"
-bindsym --no-warn $mod+F10 workspace "20:"
-
-bindsym --no-warn $mod+Shift+2   move container to workspace number 2
-bindsym --no-warn $mod+Shift+F1  move container to workspace number 11
-bindsym --no-warn $mod+Shift+F2  move container to workspace number 12
-bindsym --no-warn $mod+Shift+F3  move container to workspace number 13
-bindsym --no-warn $mod+Shift+F9  move container to workspace "19:"
-bindsym --no-warn $mod+Shift+F10 move container to workspace "20:"
 
 # Input configuration
 input "2:7:SynPS/2_Synaptics_TouchPad" {
@@ -46,4 +38,4 @@ bindswitch --reload lid:on output eDP-1 disable
 bindswitch --reload lid:off output eDP-1 enable
 
 # Default outputs for workspaces
-workspace "1:龜" output DP-4
+workspace $ws1 output DP-4
