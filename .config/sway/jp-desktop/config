@@ -1,3 +1,9 @@
+# Workspace names
+set $ws14 "14:"
+
+# Default workspaces for programs
+assign [class="^net.sourceforge.mumble.mumble$"] $ws14
+
 # Output configuration
 output HDMI-A-1 pos 0,0
 output DVI-D-1 pos 1920,0
@@ -14,4 +20,5 @@ exec signal-desktop
 exec riot-desktop
 exec env GDK_BACKEND=wayland thunderbird
 exec feedreader
+exec mumble
 exec quodlibet

@@ -19,7 +19,7 @@ set $ws10 number 10
 set $ws11 "11:"
 set $ws12 "12:"
 set $ws13 "13:"
-set $ws14 "14:"
+set $ws14 number 15
 set $ws15 number 15
 set $ws16 number 16
 set $ws17 number 17
