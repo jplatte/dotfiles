@@ -2,7 +2,7 @@
 set $ws14 "14:"
 
 # Default workspaces for programs
-assign [class="^net.sourceforge.mumble.mumble$"] $ws14
+assign [app_id="^net.sourceforge.mumble.mumble$"] $ws14
 
 # Output configuration
 output HDMI-A-1 pos 0,0
