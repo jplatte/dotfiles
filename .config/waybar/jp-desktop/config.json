@@ -95,8 +95,8 @@
         "format": "<span color='#888'></span> {} %",
         "on-click": "~/.local/bin/scripts/quodlibet-control play-pause",
         "on-click-right": "~/.local/bin/scripts/quodlibet-control stop",
-        "on-scroll-up": "~/.local/bin/scripts/quodlibet-volume +5; pkill -SIGRTMIN+10 waybar",
-        "on-scroll-down": "~/.local/bin/scripts/quodlibet-volume -5; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-up": "playerctl volume 0.05+; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-down": "playerctl volume 0.05-; pkill -SIGRTMIN+10 waybar",
         "tooltip": false
     },
     "clock#date": {
