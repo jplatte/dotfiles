@@ -147,9 +147,9 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute        exec pamixer -t
 
 # Music player controls
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPrev exec playerctl stop && playerctl previous && playerctl play
 bindsym XF86AudioPlay exec playerctl play-pause || quodlibet --run --play
-bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioNext exec playerctl next && playerctl play
 
 # Move workspace between outputs
 bindsym $mod+x move workspace to output right
