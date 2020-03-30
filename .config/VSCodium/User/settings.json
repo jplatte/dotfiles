@@ -1,0 +1,138 @@
+{
+    "telemetry.enableTelemetry": false,
+
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    "editor.fontFamily": "'Iosevka SS06', 'Font Awesome 5 Free'",
+    "editor.fontSize": 12.5,
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.letterSpacing": 0,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        80,
+        100
+    ],
+
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.fontSize": 13,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "window.zoomLevel": 2,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+
+    "workbench.activityBar.visible": true,
+    "workbench.editor.showTabs": false,
+    "workbench.enableExperiments": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+
+    "breadcrumbs.enabled": true,
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.untrackedChanges": "separate",
+
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": true,
+
+    "debug.toolBarLocation": "docked",
+
+    "extensions.showRecommendationsOnlyOnDemand": true,
+
+    "npm.fetchOnlinePackageInfo": false,
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    "vsicons.dontShowNewVersionMessage": true,
+    "vsicons.projectDetection.disableDetect": true,
+
+    "rust-analyzer.cargo-watch.command": "clippy --all",
+    "rust-analyzer.highlightingOn": true,
+
+    "python.formatting.provider": "black",
+
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_fallbackStyle": "none",
+
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
+    "gitlens.menus": {
+        "editor": false,
+        "editorGroup": {
+            "blame": true,
+            "compare": true,
+            "history": false,
+            "remote": false
+        },
+        "editorTab": false,
+        "explorer": false
+    },
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.dateFormat": "YYYY-MM-DD",
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.views.repositories.enabled": true,
+    "gitlens.views.fileHistory.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.mode.statusBar.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y",
+        "defaultIndent: '%INDENT%'"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdfxe",
+                "-output-directory=output",
+                "%DOC%"
+            ]
+        }
+    ],
+
+    "[cpp]": {
+        "editor.formatOnSave": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.formatOnSave": false
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}
