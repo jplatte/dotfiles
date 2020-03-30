@@ -1,5 +1,4 @@
 # Custom workspace names
-set $ws2 number 2
 set $ws11 number 11
 set $ws12 number 12
 set $ws13 number 13
@@ -7,6 +6,8 @@ set $ws19 "19:"
 
 # Application specific configuration
 assign [app_id="^firefox$"] $ws1
+assign [class="^Mattermost$"] $ws2
+assign [class="^Microsoft Teams"] $ws2
 assign [app_id="^desktopclient.owncloud.com.owncloud$"] $ws19
 
 for_window [class="^MATLAB "] layout tabbed
