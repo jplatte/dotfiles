@@ -7,11 +7,19 @@ set $ws19 "19:"
 # Application specific configuration
 assign [app_id="^firefox$"] $ws1
 assign [class="^Mattermost$"] $ws2
-assign [class="^Microsoft Teams"] $ws2
+assign [class="Microsoft Teams"] $ws2
 assign [app_id="^desktopclient.owncloud.com.owncloud$"] $ws19
 
 for_window [class="^MATLAB "] layout tabbed
 for_window [app_id="^virt-manager$"] layout tabbed
+
+# Teams notifications
+for_window [class="Microsoft Teams" title="^Microsoft Teams-Benachrichtigung$"] {
+    # Move focus back to the main window / don't focus the notification
+    focus tiling
+    # Move the notification to the top right
+    move position 1600 160
+}
 
 # Input configuration
 input "2:7:SynPS/2_Synaptics_TouchPad" {
@@ -24,6 +32,7 @@ exec gnome-keyring-daemon -sdc ssh
 exec owncloud --logfile /dev/null
 exec solaar
 exec alacritty -e ~/.local/bin/scripts/monitor-setup
+exec teams
 
 # Output configuration
 output DP-4 pos 0,0
