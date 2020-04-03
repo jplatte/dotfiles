@@ -11,7 +11,7 @@
         "custom/df-home",
         "custom/wifi",
         "pulseaudio",
-        "custom/quodlibet-volume",
+        "custom/mpris-volume",
         "clock#date",
         "clock#clock"
     ],
@@ -83,10 +83,15 @@
         "on-scroll-down": "pamixer -d 5",
         "tooltip": false
     },
-    "custom/quodlibet-volume": {
-        "exec": "~/.config/waybar/modules/quodlibet-volume.sh",
+    "custom/mpris-volume": {
+        "exec": "playerctl volume | awk '{ printf \"%.f\", $1 * 100 }'",
         "interval": 60,
+        "signal": 10,
         "format": "<span color='#888'></span> {} %",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "on-scroll-up": "playerctl volume 0.05+; pkill -SIGRTMIN+10 waybar",
+        "on-scroll-down": "playerctl volume 0.05-; pkill -SIGRTMIN+10 waybar",
         "tooltip": false
     },
     "clock#date": {
