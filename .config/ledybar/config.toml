@@ -1,0 +1,51 @@
+opacity = 0.9
+#script_dir = "scripts"
+
+[[modules]]
+format = "html"
+command = "~/.cargo/bin/ledybar-mod-i3-workspaces"
+classes = ["workspaces"]
+
+[[modules]]
+command = "~/.config/ledybar/scripts/pacman.sh"
+interval = 3600
+
+[[modules]]
+format = "json"
+command = "~/.config/ledybar/scripts/battery.sh BAT0"
+interval = 20
+classes = ["battery"]
+
+[[modules]]
+format = "html"
+command = "printf '<span class=\"grey\">\\uf0a0 /</span> %s' \"$(~/.config/ledybar/scripts/df.sh /)\""
+interval = 60
+
+[[modules]]
+format = "html"
+command = "printf '<span class=\"grey\">\\uf0a0 \\uf2bd</span> %s' \"$(~/.config/ledybar/scripts/df.sh /home/jplatte)\""
+interval = 60
+
+[[modules]]
+format = "json"
+command = "~/.config/ledybar/scripts/wifi.sh wlp1s0"
+interval = 20
+classes = ["wifi"]
+
+[[modules]]
+format = "html"
+command = "printf '<span class=\"grey\">\\uf028</span> %s\\u2009%%' \"$(pamixer --get-volume)\""
+
+#[[modules]]
+#format = "html"
+#command = "printf '<span class=\"grey\">\\uf001</span> %s\\u2009%%' \"$(playerctl volume | awk '{ printf \"%.f\", $1 * 100 }')\""
+
+[[modules]]
+format = "html"
+command = "~/.config/ledybar/scripts/date.sh"
+interval = 60
+
+[[modules]]
+format = "html"
+command = "~/.config/ledybar/scripts/time.sh"
+interval = 60
