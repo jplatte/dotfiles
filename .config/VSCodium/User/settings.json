@@ -42,8 +42,9 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "vsicons.dontShowNewVersionMessage": true,
     "vsicons.projectDetection.disableDetect": true,
-    "rust-analyzer.cargo-watch.command": "clippy --all",
-    "rust-analyzer.highlightingOn": true,
+    "rust-analyzer.inlayHints.parameterHints": false,
+    "rust-analyzer.inlayHints.typeHints": false,
+    "rust-analyzer.checkOnSave.command": "clippy",
     "python.formatting.provider": "black",
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
     "gitlens.menus": {
