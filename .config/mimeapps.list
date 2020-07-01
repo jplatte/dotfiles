@@ -34,8 +34,9 @@ x-scheme-handler/http=userapp-ff-nightly.desktop
 x-scheme-handler/https=userapp-ff-nightly.desktop
 
 [Added Associations]
+application/illustrator=org.inkscape.Inkscape.desktop;
 application/pdf=libreoffice-draw.desktop;
 image/jpeg=gimp.desktop;
 image/png=gimp.desktop;
-image/svg+xml=org.gnome.gedit.desktop;inkscape.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;org.gnome.gedit.desktop;
 text/css=org.gnome.gedit.desktop;
