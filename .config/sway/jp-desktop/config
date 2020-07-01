@@ -1,5 +1,6 @@
 # Workspace names
 set $ws14 "14:"
+set $ws19 "19:"
 
 # Default workspaces for programs
 assign [app_id="^net.sourceforge.mumble.mumble$"] $ws14
@@ -20,5 +21,4 @@ exec signal-desktop
 exec riot-desktop
 exec env GDK_BACKEND=wayland thunderbird
 exec feedreader
-exec mumble
 exec quodlibet
