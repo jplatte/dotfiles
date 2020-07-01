@@ -1,12 +1,9 @@
 {
     "telemetry.enableTelemetry": false,
-
     "update.mode": "none",
     "update.showReleaseNotes": false,
-
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-
     "editor.fontFamily": "'Iosevka SS06', 'Font Awesome 5 Free'",
     "editor.fontSize": 12.5,
     "editor.fontLigatures": true,
@@ -18,17 +15,13 @@
         80,
         100
     ],
-
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.fontSize": 13,
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-
     "window.zoomLevel": 2,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
-
     "workbench.activityBar.visible": true,
     "workbench.editor.showTabs": false,
     "workbench.enableExperiments": false,
@@ -36,36 +29,22 @@
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
-
     "breadcrumbs.enabled": true,
-
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.untrackedChanges": "separate",
-
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,
-
     "debug.toolBarLocation": "docked",
-
     "extensions.showRecommendationsOnlyOnDemand": true,
-
     "npm.fetchOnlinePackageInfo": false,
-
     "typescript.updateImportsOnFileMove.enabled": "always",
-
     "vsicons.dontShowNewVersionMessage": true,
     "vsicons.projectDetection.disableDetect": true,
-
     "rust-analyzer.cargo-watch.command": "clippy --all",
     "rust-analyzer.highlightingOn": true,
-
     "python.formatting.provider": "black",
-
-    "C_Cpp.updateChannel": "Insiders",
-    "C_Cpp.clang_format_fallbackStyle": "none",
-
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
     "gitlens.menus": {
         "editor": false,
@@ -90,7 +69,6 @@
     "gitlens.mode.statusBar.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
-
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
@@ -115,18 +93,8 @@
             ]
         }
     ],
-
-    "[cpp]": {
-        "editor.formatOnSave": false
-    },
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[markdown]": {
         "files.trimTrailingWhitespace": false,
