@@ -24,3 +24,5 @@
 	smtpserverport = 587
 [pull]
 	ff = only
+[rebase]
+	autosquash = true
