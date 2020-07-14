@@ -22,4 +22,5 @@ exec signal-desktop
 exec riot-desktop
 exec env GDK_BACKEND=wayland thunderbird
 exec com.gitlab.newsflash
+exec slack
 exec quodlibet
