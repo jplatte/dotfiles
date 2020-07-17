@@ -6,7 +6,7 @@ set $browser firefox-nightly -P nightly
 set $file_manager nautilus
 
 # Named workspaces
-set $ws1 "1:龜"
+set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 number 4
