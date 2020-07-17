@@ -58,6 +58,8 @@ exec mako
 # => Round volume to a multiple of 5
 exec pamixer --set-volume $(pamixer --get-volume | awk '{ print int(($1 / 5) + 0.5) * 5 }')
 exec $browser
+exec element-desktop
+exec signal-desktop
 
 # Input device configuration
 input * {
@@ -72,7 +74,7 @@ output * bg ~/Bilder/Wallpaper/FLATzero_2880x1800.jpg fill
 
 # Default workspaces for common programs
 assign [class="^Signal$"] $ws2
-assign [class="^Riot$"] $ws2
+assign [class="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^NewsFlashGTK$"] $ws3
 assign [class="^Steam$"] $ws11
