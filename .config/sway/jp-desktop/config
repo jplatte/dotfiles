@@ -1,10 +1,8 @@
 # Workspace names
 set $ws14 "14:"
-set $ws19 "19:"
 
 # Default workspaces for programs
 assign [app_id="^net.sourceforge.mumble.mumble$"] $ws14
-assign [class="^Slack$"] $ws19
 
 # Output configuration
 output HDMI-A-1 pos 0,0

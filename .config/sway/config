@@ -24,7 +24,7 @@ set $ws15 number 15
 set $ws16 number 16
 set $ws17 number 17
 set $ws18 number 18
-set $ws19 number 19
+set $ws19 "19:"
 set $ws20 "20:"
 set $ws21 "21:"
 set $ws42 "42:"
@@ -79,6 +79,7 @@ assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^NewsFlashGTK$"] $ws3
 assign [class="^Steam$"] $ws11
 assign [class="^Wine$"] $ws12
+assign [class="^Slack$"] $ws19
 assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] $ws21
 assign [app_id="^io.github.quodlibet.QuodLibet$"] $ws42
 
