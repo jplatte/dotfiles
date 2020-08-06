@@ -1,0 +1,17 @@
+#search {
+    border: unset;
+    outline: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    border-bottom: 1px solid #777;
+
+    padding: 2px 8px;
+}
+
+.app-row {
+    padding: 6px 8px;
+}
+
+.app-label {
+    margin-left: 7px;
+}
