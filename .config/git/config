@@ -26,3 +26,5 @@
 	ff = only
 [rebase]
 	autosquash = true
+[checkout]
+	defaultRemote = origin
