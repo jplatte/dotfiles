@@ -1,4 +1,3 @@
-markup_highlight = 'underline="low"'
 exclusive = true
 lines = 1
 icon_size = 24
@@ -12,3 +11,7 @@ margin_left = 0
 margin_right = 0
 width = 600
 height = 325
+
+markup_highlight = 'underline="low"'
+extra_field = []
+hidden_fields = ["id_suffix"]
