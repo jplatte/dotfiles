@@ -28,3 +28,6 @@
 	autosquash = true
 [checkout]
 	defaultRemote = origin
+[fetch]
+	prune = true
+	pruneTags = true
