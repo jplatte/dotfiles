@@ -30,4 +30,3 @@
 	defaultRemote = origin
 [fetch]
 	prune = true
-	pruneTags = true
