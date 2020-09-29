@@ -7,9 +7,10 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.local/share/npm/bin)
 [[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" down-line-or-history
 
 # Aliases
-alias cal='cal -3'
-alias diff='diff --color=auto'
-alias ip='ip -c'
+alias cal='command cal -3'
+alias diff='command diff --color=auto'
+alias l='command ls -lvh --color=auto'
+alias ip='command ip -c'
 alias lumeo-db-up='sudo systemctl start docker && sudo docker-compose up db'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
