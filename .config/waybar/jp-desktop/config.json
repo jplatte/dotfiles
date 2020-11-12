@@ -22,7 +22,7 @@
         "exec": "~/.config/waybar/modules/pacman.sh",
         "interval": "once",
         "signal": 7,
-        "on-click": "swaymsg exec -- alacritty -e bash -c '\"pikaur -Syu; pkill -SIGRTMIN+7 waybar\"'",
+        "on-click": "swaymsg exec -- alacritty -e bash -c '\"paru -Syu; pkill -SIGRTMIN+7 waybar\"'",
         "tooltip": false
     },
     "custom/mouse-bat": {
