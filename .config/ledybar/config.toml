@@ -8,7 +8,7 @@ classes = ["workspaces"]
 
 [[modules]]
 command = "~/.config/ledybar/scripts/pacman.sh"
-interval = 3600
+interval = 600
 
 [[modules]]
 format = "json"

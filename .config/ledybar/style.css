@@ -33,7 +33,7 @@
     margin-right: auto !important;
 }
 
-.charging {
+.module.charging {
     /* TODO: fancy animation */
     border-bottom-color: white;
 }
