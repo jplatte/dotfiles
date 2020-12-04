@@ -11,7 +11,7 @@ alias cal='command cal -3'
 alias diff='command diff --color=auto'
 alias l='command ls -lvh --color=auto'
 alias ip='command ip -c'
-alias lumeo-db-up='sudo systemctl start docker && sudo docker-compose up db'
+alias lumeo-dc-up='sudo systemctl start docker && sudo docker-compose up db adminer mqtt'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
 alias sudo='sudo '
