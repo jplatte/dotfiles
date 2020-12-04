@@ -29,6 +29,7 @@
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.startupEditor": "newUntitledFile",
     "breadcrumbs.enabled": true,
     "git.autofetch": true,
     "git.confirmSync": false,
