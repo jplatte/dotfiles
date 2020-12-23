@@ -10,8 +10,10 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.local/share/npm/bin)
 alias cal='command cal -3'
 alias diff='command diff --color=auto'
 alias l='command ls -lvh --color=auto'
+alias la='command ls -lavh --color=auto'
+alias lsof='command lsof -P'
 alias ip='command ip -c'
-alias lumeo-dc-up='sudo systemctl start docker && sudo docker-compose up db adminer mqtt'
+alias lumeo-dc-up='sudo systemctl start docker && sudo docker-compose up db adminer mqtt fs'
 
 # When using sudo, use alias expansion (otherwise sudo ignores aliases)
 alias sudo='sudo '
