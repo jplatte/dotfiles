@@ -14,6 +14,9 @@ output "Goldstar Company Ltd LG TV 0x00000101" {
 
 output eDP-1 pos 0 1080
 
+workspace $ws1 output eDP-1
+workspace $ws2 output eDP-1
+
 # Display brightness controls
 bindsym XF86MonBrightnessUp   exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
