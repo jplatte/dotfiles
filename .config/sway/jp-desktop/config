@@ -17,7 +17,7 @@ workspace $ws21 output DVI-D-1
 workspace $ws42 output DVI-D-1
 
 # Autostart
-exec env GDK_BACKEND=wayland thunderbird
+exec thunderbird
 exec com.gitlab.newsflash
 exec slack
 exec quodlibet

@@ -3,5 +3,5 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 NoDisplay=true
-Exec=env GDK_BACKEND=wayland firefox-nightly -P nightly %u
+Exec=firefox-nightly -P nightly %u
 Name=Firefox Nightly
