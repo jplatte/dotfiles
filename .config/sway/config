@@ -60,6 +60,7 @@ exec pamixer --set-volume $(pamixer --get-volume | awk '{ print int(($1 / 5) + 0
 exec $browser
 exec element-desktop
 exec signal-desktop
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Input device configuration
 input * {
