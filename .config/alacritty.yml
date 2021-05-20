@@ -24,14 +24,6 @@ font:
 
 background_opacity: 0.8
 
-mouse:
-  url:
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    modifiers: Control
-
 cursor:
   style: Underline
 

@@ -35,8 +35,8 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.untrackedChanges": "separate",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
     "debug.toolBarLocation": "docked",
     "npm.fetchOnlinePackageInfo": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -106,5 +106,7 @@
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "gitlens.mode.active": "zen",
+    "crates.listPreReleases": true,
 }
