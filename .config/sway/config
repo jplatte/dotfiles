@@ -81,6 +81,7 @@ assign [app_id="^NewsFlashGTK$"] $ws3
 assign [class="^Steam$"] $ws11
 assign [class="^Wine$"] $ws12
 assign [class="^Slack$"] $ws19
+assign [class="^Zulip$"] $ws19
 assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] $ws21
 assign [app_id="^io.github.quodlibet.QuodLibet$"] $ws42
 
@@ -89,6 +90,8 @@ for_window [app_id="^firefox$"] layout tabbed
 for_window [app_id="^thunderbird$"] layout tabbed
 for_window [app_id="^NewsFlashGTK$"] layout tabbed
 for_window [class="^Code" title="Visual Studio Code"] layout tabbed
+for_window [class="^Slack$"] layout tabbed
+for_window [class="^Zulip$"] layout tabbed
 for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 for_window [app_id="^gnome-calculator$"] floating enable
@@ -102,7 +105,7 @@ for_window [class="^Steam$"] layout tabbed
 
 # Other window-specific settings
 for_window [class="^Signal$"] opacity 0.9
-for_window [class="^Riot$"] opacity 0.9
+for_window [class="^Element$"] opacity 0.9
 for_window [app_id="^org.gnome.Nautilus$"] opacity 0.9
 for_window [app_id="^org.gnome.gedit$"] opacity 0.9
 for_window [app_id="^file-roller$"] opacity 0.9

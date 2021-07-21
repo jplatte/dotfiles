@@ -20,4 +20,5 @@ workspace $ws42 output DVI-D-1
 exec thunderbird
 exec com.gitlab.newsflash
 exec slack
+exec zulip
 exec quodlibet
