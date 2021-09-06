@@ -15,9 +15,6 @@ alias lsof='command lsof -P'
 alias ip='command ip -c'
 alias lumeo-dc-start='sudo systemctl start docker && sudo docker-compose start db mqtt fs'
 
-# When using sudo, use alias expansion (otherwise sudo ignores aliases)
-alias sudo='sudo '
-
 # Command not found
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
