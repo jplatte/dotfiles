@@ -59,7 +59,7 @@ exec mako
 exec pamixer --set-volume $(pamixer --get-volume | awk '{ print int(($1 / 5) + 0.5) * 5 }')
 exec $browser
 exec element-desktop
-exec signal-desktop
+exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Input device configuration
@@ -295,3 +295,5 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
+
+include /etc/sway/config.d/*

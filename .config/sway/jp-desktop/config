@@ -19,6 +19,6 @@ workspace $ws42 output DVI-D-1
 # Autostart
 exec thunderbird
 exec com.gitlab.newsflash
-exec slack
-exec zulip
+exec slack --enable-features=UseOzonePlatform --ozone-platform=wayland
+exec zulip --enable-features=UseOzonePlatform --ozone-platform=wayland
 exec quodlibet
