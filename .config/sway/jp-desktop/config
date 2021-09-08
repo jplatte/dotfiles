@@ -8,6 +8,8 @@ assign [app_id="^net.sourceforge.mumble.mumble$"] $ws14
 output HDMI-A-1 pos 0,0
 output DVI-D-1 pos 1920,0
 
+output * bg ~/Bilder/Wallpaper/red_sun.png fill
+
 # Default outputs for workspaces
 workspace $ws1 output HDMI-A-1
 workspace $ws2 output HDMI-A-1

@@ -70,7 +70,6 @@ input * {
     xkb_numlock enabled
 }
 
-# Output configuration output * bg ~/Bilder/Wallpaper/FLATzero_2880x1800.jpg fill
 # Default workspaces for common programs
 assign [app_id="^Signal$"] $ws2
 assign [class="^Element"] $ws2
@@ -110,6 +109,9 @@ for_window [app_id="^file-roller$"] opacity 0.9
 for_window [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] opacity 0.9
 for_window [app_id="^io.github.quodlibet.QuodLibet$"] opacity 0.9
 for_window [app_id="^zenity$"] opacity 0.9
+
+bindsym $mod+o opacity 0.9
+bindsym $mod+Shift+o opacity 1.0
 
 # Program shortcuts
 bindsym $mod+Return exec $term
