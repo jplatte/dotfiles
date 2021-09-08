@@ -6,6 +6,7 @@
 	ff = merge --ff-only
 	hist = log --exclude='refs/remotes/*/docs' --exclude='refs/remotes/*/gh-pages' --all --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 	amend = commit --amend
+	sw = switch
 [color]
 	ui = auto
 [advice]
