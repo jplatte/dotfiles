@@ -297,7 +297,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 mode passthrough {
-    $mod+Insert mode default
+    bindsym $mod+Insert mode default
 }
 bindsym $mod+Insert mode passthrough
 

@@ -14,6 +14,8 @@ output "Goldstar Company Ltd LG TV 0x00000101" {
 
 output eDP-1 pos 0 1080
 
+output * bg ~/Bilder/Wallpaper/vyoletznebula_1920x1080.jpg fill
+
 workspace $ws1 output eDP-1
 workspace $ws2 output eDP-1
 
