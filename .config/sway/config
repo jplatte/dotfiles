@@ -31,7 +31,7 @@ set $ws42 "42:"
 
 # Include host-specific config after setting variables but before everything
 # else so that host-specific configs can override them
-include ~/.config/sway/`hostname`/*
+include "~/.config/sway/`hostnamectl hostname`/*"
 
 # Colors               (border  bg      text    indicator child_border)
 client.focused          #bdbdbd #bdbdbd #000000 #bdbdbd   #bdbdbd
@@ -52,7 +52,7 @@ workspace_layout default
 
 # Autostart
 exec gammastep -m wayland
-exec waybar -c ~/.config/waybar/`hostname`/config.json
+exec waybar -c "~/.config/waybar/`hostnamectl hostname`/config.json"
 exec sh -c "nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done >/dev/null"
 exec mako
 # => Round volume to a multiple of 5
