@@ -15,5 +15,15 @@
     {
         "key": "ctrl+k ctrl+w",
         "command": "-workbench.action.closeAllEditors"
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorWordPartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "cursorWordPartLeftSelect",
+        "when": "textInputFocus"
     }
 ]
