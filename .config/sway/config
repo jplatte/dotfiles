@@ -80,6 +80,7 @@ assign [app_id="^NewsFlashGTK$"] $ws3
 assign [class="^Steam$"] $ws11
 assign [class="^Wine$"] $ws12
 assign [app_id="^Slack$"] $ws19
+assign [class="^Slack$"] $ws19
 assign [app_id="^Zulip$"] $ws19
 assign [app_id="^org.keepassxc.KeePassXC$" title="KeePassXC$"] $ws21
 assign [app_id="^io.github.quodlibet.QuodLibet$"] $ws42
@@ -90,11 +91,13 @@ for_window [app_id="^thunderbird$"] layout tabbed
 for_window [app_id="^NewsFlashGTK$"] layout tabbed
 for_window [app_id="^VSCodium$" title="VSCodium"] layout tabbed
 for_window [app_id="^Slack$"] layout tabbed
+for_window [class="^Slack$"] layout tabbed
 for_window [app_id="^Zulip$"] layout tabbed
-for_window [app_id="^zenity$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
 for_window [app_id="^gnome-calculator$"] floating enable
 for_window [app_id="^glade-previewer$"] floating enable
+for_window [app_id="^jmc$"] floating enable
+for_window [app_id="^zenity$"] floating enable
 # Nautilus typeahead popup
 for_window [app_id="^nautilus$" title="^nautilus$"] floating enable
 for_window [app_id="^org.keepassxc.KeePassXC$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
