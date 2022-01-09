@@ -5,24 +5,24 @@
 @define-color cyan #159f9e;
 @define-color brightred #f53c3c;
 
-* {
-    border: none;
-    border-radius: 0;
+window#waybar {
+    background: rgba(43, 48, 59, 0.8);
+    color: white;
     font-family: 'Noto Sans';
     font-size: 15px;
 }
 
-window#waybar {
-    background: rgba(43, 48, 59, 0.8);
-    color: white;
+window#waybar.eDP-1 {
+    font-size: 12px;
 }
 
 #workspaces button {
-    margin: 0 4px;
-    padding: 3px 5px;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button:hover {
     background: transparent;
-    color: #ccc;
-    border-bottom: 3px solid #888;
 }
 
 #workspaces button:first-child {
@@ -48,11 +48,13 @@ window#waybar {
     border-bottom-color: @brightred;
 }
 
-#cpu, #memory, #pulseaudio, #clock, #custom-battery, #custom-wifi, #custom-mouse-bat,
-#custom-df-root, #custom-df-home, #custom-df-daten, #network, #custom-owncloud,
-#custom-mpris-volume, #custom-pacman {
-    padding: 3px 5px;
-    margin: 0 4px;
+#workspaces button, #cpu, #memory, #pulseaudio, #clock, #custom-battery,
+#custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home,
+#custom-df-daten, #network, #custom-owncloud, #custom-mpris-volume,
+#custom-pacman {
+    /* unclear why .225em for bottom padding looks wrong on HiDPI */
+    padding: .225em .375em .15em;
+    margin: 0 .3em;
     color: #ccc;
     border-bottom: 3px solid #aaa;
 }

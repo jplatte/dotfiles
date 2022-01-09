@@ -26,7 +26,7 @@
         "tooltip": false
     },
     "custom/battery": {
-        "exec": "~/.config/waybar/modules/battery.sh BAT0",
+        "exec": "~/.config/waybar/modules/battery.sh BAT1",
         "return-type": "json",
         "interval": 15,
         "signal": 2,
