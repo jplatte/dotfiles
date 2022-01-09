@@ -59,7 +59,7 @@ exec mako
 exec pamixer --set-volume $(pamixer --get-volume | awk '{ print int(($1 / 5) + 0.5) * 5 }')
 exec $browser
 exec element-desktop
-exec signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+exec signal-desktop
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Input device configuration
@@ -72,6 +72,8 @@ input * {
 
 # Default workspaces for common programs
 assign [app_id="^Signal$"] $ws2
+assign [class="^Signal$"] $ws2
+assign [app_id="^Element"] $ws2
 assign [class="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^NewsFlashGTK$"] $ws3
@@ -98,6 +100,7 @@ for_window [app_id="^nautilus$" title="^nautilus$"] floating enable
 for_window [app_id="^org.keepassxc.KeePassXC$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
 # gtk-rs programs have this id by default
 for_window [app_id="^\.$"] floating enable
+for_window [app_id="^jmc$"] floating enable
 for_window [class="^Steam$"] layout tabbed
 
 # Other window-specific settings

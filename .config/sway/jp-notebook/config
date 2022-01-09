@@ -1,5 +1,5 @@
 # Input device configuration
-input "1102:4618:MSFT0001:00_044E:120A_Touchpad" {
+input "1267:12734:MSFT0004:00_04F3:31BE_Touchpad" {
     natural_scroll enabled
     scroll_method two_finger
     tap enabled
