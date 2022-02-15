@@ -51,7 +51,7 @@ window#waybar.eDP-1 {
 #workspaces button, #cpu, #memory, #pulseaudio, #clock, #custom-battery,
 #custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home,
 #custom-df-daten, #network, #custom-owncloud, #custom-mpris-volume,
-#custom-pacman {
+#custom-pacman, #custom-mumble-users {
     /* unclear why .225em for bottom padding looks wrong on HiDPI */
     padding: .225em .375em .15em;
     margin: 0 .3em;

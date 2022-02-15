@@ -4,6 +4,7 @@
     ],
     "modules-right": [
         "custom/pacman",
+        "custom/mumble-users",
         "custom/mouse-bat",
         "custom/df-root",
         "custom/df-home",
@@ -23,6 +24,13 @@
         "interval": "once",
         "signal": 7,
         "on-click": "swaymsg exec -- alacritty -e bash -c '\"paru -Syu; pkill -SIGRTMIN+7 waybar\"'",
+        "tooltip": false
+    },
+    "custom/mumble-users": {
+        "exec": "~/.config/waybar/modules/mumble-user-count.py mumble.flipdot.org 64738",
+        "interval": 60,
+        "format": "<span color='#888'></span> {}",
+        "on-click": "mumble",
         "tooltip": false
     },
     "custom/mouse-bat": {
