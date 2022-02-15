@@ -1,6 +1,6 @@
 #!/bin/bash
 
-info_line=$(solaar show | grep Battery | grep -v offline)
+info_line=$(solaar show | grep Battery | grep -v offline | head -n1)
 percentage=$(sed 's/\s*Battery: \([0-9]\+\)%.*/\1/' <<< $info_line)
 
 if ( grep -q recharging <<< "$info_line" ); then
