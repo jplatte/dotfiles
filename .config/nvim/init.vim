@@ -22,6 +22,9 @@ set noshowmode
 " enable full color support
 set termguicolors
 
+" enable mouse support
+set mouse=a
+
 " save cursor position
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
