@@ -9,11 +9,11 @@ path=($path[@] ~/.local/bin ~/.cargo/bin ~/.local/share/npm/bin)
 # Aliases
 alias cal='command cal -3'
 alias diff='command diff --color=auto'
+alias git='LANG=en_US.UTF-8 git'
 alias l='command ls -lvh --color=auto'
 alias la='command ls -lavh --color=auto'
 alias lsof='command lsof -P'
 alias ip='command ip -c'
-alias lumeo-dc-start='sudo systemctl start docker && sudo docker-compose start db mqtt fs'
 
 # Command not found
 source /usr/share/doc/pkgfile/command-not-found.zsh
