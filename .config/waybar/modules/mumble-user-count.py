@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     r = unpack(">bbbbQiii", data)
 
-    users = r[5] - 1
+    users = r[5]
 
     if users > 0:
         print(users)
