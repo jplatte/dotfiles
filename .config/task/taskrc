@@ -50,3 +50,5 @@ urgency.tags.coefficient=0.0
 report.list.sort=start-,due+,urgency-,project+
 #report.next.filter=(status:pending and +UNBLOCKED and urgency > 0 and limit:page)
 #urgency.active.coefficient=0
+
+news.version=2.6.0
