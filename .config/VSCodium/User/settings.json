@@ -1,5 +1,7 @@
 {
+    // basic settings
     "breadcrumbs.enabled": true,
+    "debug.toolBarLocation": "docked",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "'Iosevka SS06', 'Font Awesome 5 Free'",
     "editor.fontSize": 12.5,
@@ -16,6 +18,10 @@
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.untrackedChanges": "separate",
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.fontSize": 13,
@@ -32,30 +38,15 @@
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "newUntitledFile",
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "git.untrackedChanges": "separate",
-    "debug.toolBarLocation": "docked",
-    "npm.fetchOnlinePackageInfo": false,
-    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "vsicons.dontShowNewVersionMessage": true,
-    "vsicons.projectDetection.disableDetect": true,
-    "rust-analyzer.assist.importEnforceGranularity": true,
-    "rust-analyzer.callInfo.full": false,
-    "rust-analyzer.cargo.unsetTest": [
-        "ed25519-dalek",
-    ],
-    "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.inlayHints.enable": false,
-    "rust-analyzer.inlayHints.hideNamedConstructorHints": true,
-    "rust-analyzer.procMacro.ignored": {
-        "async-trait": [
-            "async-trait"
-        ],
-    },
+    // GitLens
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.dateFormat": "YYYY-MM-DD",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
     "gitlens.menus": {
         "editor": false,
         "editorGroup": {
@@ -66,15 +57,26 @@
         },
         "editorTab": false,
     },
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.hovers.enabled": false,
-    "gitlens.blame.avatars": false,
-    "gitlens.blame.dateFormat": "YYYY-MM-DD",
-    "gitlens.defaultDateStyle": "absolute",
-    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.mode.active": "zen",
     "gitlens.mode.statusBar.enabled": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    // vscode-icons
+    "vsicons.dontShowNewVersionMessage": true,
+    "vsicons.projectDetection.disableDetect": true,
+    // Rust settings
+    "crates.listPreReleases": true,
+    "rust-analyzer.assist.importEnforceGranularity": true,
+    "rust-analyzer.callInfo.full": false,
+    "rust-analyzer.cargo.unsetTest": [
+        "ed25519-dalek",
+    ],
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.enable": false,
+    "rust-analyzer.inlayHints.hideNamedConstructorHints": true,
+    // JS / TS settings
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    // latex workshop
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
@@ -99,6 +101,7 @@
             ]
         }
     ],
+    // file type overrides
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -112,6 +115,4 @@
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "gitlens.mode.active": "zen",
-    "crates.listPreReleases": true,
 }
