@@ -29,6 +29,8 @@ set $ws20 "20:"
 set $ws21 "21:"
 set $ws42 "42:"
 
+output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+
 # Include host-specific config after setting variables but before everything
 # else so that host-specific configs can override them
 include "~/.config/sway/`hostnamectl hostname`/*"
