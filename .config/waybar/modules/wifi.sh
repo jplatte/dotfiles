@@ -6,19 +6,27 @@ fi
 
 iface="$1"
 
+if [[ -z "$iface" ]]; then
+    echo 'usage: $0 <network_device>' >&2
+    exit 1
+fi
+
 network_name=$(
     nmcli -t -f name,device c s -a \
         | grep ":${iface}$" \
         | cut -d':' -f1
 )
+iwconfig_out=$(iwconfig "$iface")
 
-if [[ -z $network_name ]]; then
+if [[ -z "$network_name" ]]; then
     jq -nc '{ "text": " disconnected", "class": "disconnected" }'
+elif ( grep -qF 'ESSID:off/any' <<< "$iwconfig_out" ); then
+    jq -nc '{ "text": " disconnected?", "class": "disconnected" }'
 else
     freq=$(iwconfig "$iface" | grep -q 'Frequency:2' && printf '2.4' || printf '5')
 
     link_quality=$(
-        iwconfig "$iface" \
+        echo "$iwconfig_out" \
             | grep 'Link Quality' \
             | sed 's/\s\+Link Quality=\([0-9]\+\/[0-9]\+\).*/\1/'
     )
