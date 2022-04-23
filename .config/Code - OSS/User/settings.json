@@ -60,6 +60,8 @@
     "gitlens.mode.active": "zen",
     "gitlens.mode.statusBar.enabled": false,
     "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.commits.avatars": false,
     // vscode-icons
     "vsicons.dontShowNewVersionMessage": true,
     "vsicons.projectDetection.disableDetect": true,
