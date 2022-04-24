@@ -99,6 +99,8 @@ for_window [app_id="^zenity$"] floating enable
 # Nautilus typeahead popup
 for_window [app_id="^nautilus$" title="^nautilus$"] floating enable
 for_window [app_id="^org.keepassxc.KeePassXC$" title="^KeePassXC-Browser: Zugriff bestätigen$"] floating enable
+# Signal Desktop file save popup for some reason uses different app_id, and empty window title
+for_window [app_id="^signal-desktop$" title="^$"] floating enable
 # gtk-rs programs have this id by default
 for_window [app_id="^\.$"] floating enable
 for_window [app_id="^jmc$"] floating enable
