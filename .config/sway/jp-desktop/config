@@ -5,16 +5,18 @@ set $ws14 "14:"
 assign [app_id="^net.sourceforge.mumble.mumble$"] $ws14
 
 # Output configuration
-output HDMI-A-1 pos 0,0
-output DVI-D-1 pos 1920,0
+output DP-1 mode 2560x1440@75Hz
+output DP-1 pos 0,0
+output HDMI-A-1 mode 2560x1440@75Hz
+output HDMI-A-1 pos 2560,0
 
 # Default outputs for workspaces
-workspace $ws1 output HDMI-A-1
-workspace $ws2 output HDMI-A-1
-workspace $ws3 output HDMI-A-1
-workspace $ws19 output DVI-D-1
-workspace $ws21 output DVI-D-1
-workspace $ws42 output DVI-D-1
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws19 output HDMI-A-1
+workspace $ws21 output HDMI-A-1
+workspace $ws42 output HDMI-A-1
 
 # Autostart
 exec thunderbird
