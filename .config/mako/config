@@ -7,7 +7,7 @@ border-color=#333333
 default-timeout=5000
 
 # Only for desktop, ignored when no such output exists
-output=HDMI-A-1
+output=DP-1
 
 background-color=#666666
 text-color=#FFFFFF
