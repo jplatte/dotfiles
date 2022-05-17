@@ -69,13 +69,11 @@
     "vsicons.projectDetection.disableDetect": true,
     // Rust settings
     "crates.listPreReleases": true,
-    "rust-analyzer.assist.importEnforceGranularity": true,
-    "rust-analyzer.callInfo.full": false,
     "rust-analyzer.cargo.unsetTest": [
         "ed25519-dalek",
     ],
     "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.inlayHints.hideNamedConstructorHints": true,
+    "rust-analyzer.imports.granularity.enforce": true,
     // JS / TS settings
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
