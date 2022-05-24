@@ -63,6 +63,10 @@ exec $browser
 exec element-desktop
 exec signal-desktop
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec swayidle \
+    timeout 300 '~/.local/bin/scripts/lock -f' \
+    before-sleep '~/.local/bin/scripts/lock -f' \
+    after-resume 'swaymsg "output * dpms on"'
 
 # Input device configuration
 input * {
@@ -147,9 +151,6 @@ bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Lock screen
 bindsym Control+Mod1+l exec ~/.local/bin/scripts/lock
-
-# ... automatically when systemd requests it
-exec swayidle lock ~/.local/bin/scripts/lock
 
 # Poweroff, reboot prompts
 bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
