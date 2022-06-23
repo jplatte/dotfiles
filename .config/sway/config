@@ -159,14 +159,14 @@ bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
 bindsym Control+$mod+s exec ~/.local/bin/scripts/zenity-suspend
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioMute        exec pamixer -t
+bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5
+bindsym --locked XF86AudioLowerVolume exec pamixer -d 5
+bindsym --locked XF86AudioMute        exec pamixer -t
 
 # Music player controls
-bindsym XF86AudioPrev exec playerctl stop && playerctl previous && playerctl play
-bindsym XF86AudioPlay exec playerctl play-pause || quodlibet --run --play
-bindsym XF86AudioNext exec playerctl next && playerctl play
+bindsym --locked XF86AudioPrev exec playerctl stop && playerctl previous && playerctl play
+bindsym --locked XF86AudioPlay exec playerctl play-pause || quodlibet --run --play
+bindsym --locked XF86AudioNext exec playerctl next && playerctl play
 
 # Move workspace between outputs
 bindsym $mod+x move workspace to output right
