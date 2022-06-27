@@ -69,9 +69,6 @@
     "vsicons.projectDetection.disableDetect": true,
     // Rust settings
     "crates.listPreReleases": true,
-    "rust-analyzer.cargo.unsetTest": [
-        "ed25519-dalek",
-    ],
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.imports.granularity.enforce": true,
     // JS / TS settings
