@@ -154,9 +154,10 @@ bindsym Control+Mod1+l exec ~/.local/bin/scripts/lock
 
 # Poweroff, reboot prompts
 bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
-bindsym Control+$mod+x exec ~/.local/bin/scripts/zenity-poweroff
 bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
-bindsym Control+$mod+s exec ~/.local/bin/scripts/zenity-suspend
+
+# Suspend
+bindsym --locked Control+$mod+s exec systemctl suspend
 
 # Volume controls
 bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5
