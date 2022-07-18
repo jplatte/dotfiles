@@ -15,6 +15,9 @@ elif [[ "$status" == 'Discharging' || "$status" == 'Not charging' ]]; then
 elif [[ "$status" == 'Full' ]]; then
     text=$(printf '<span color="#888">\uf0e7</span> ')
     class='full'
+elif [[ "$status" == 'Unknown' ]]; then
+    text=$(printf '\ufffd ')
+    class='error'
 else
     text="[$status] "
     class='error'
