@@ -1,6 +1,6 @@
 # Variables
 set $mod Mod4
-set $menu ~/.cargo/bin/sirula
+set $menu sirula
 set $term alacritty
 set $browser firefox-nightly -P nightly
 set $file_manager nautilus
