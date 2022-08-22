@@ -77,10 +77,9 @@ input * {
 }
 
 # Default workspaces for common programs
-assign [app_id="^Signal$"] $ws2
-assign [app_id="^$" title="^Signal$"] $ws2
+assign [app_id="^signal$"] $ws2
 assign [app_id="^Element"] $ws2
-assign [app_id="^$" title="^Element"] $ws2
+assign [app_id="^Electron$" title="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^NewsFlashGTK$"] $ws3
 assign [class="^Steam$"] $ws11
