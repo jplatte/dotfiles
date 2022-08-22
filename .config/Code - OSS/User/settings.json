@@ -71,6 +71,7 @@
     "crates.listPreReleases": true,
     "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.imports.granularity.enforce": true,
+    "rust-analyzer.hover.documentation.keywords.enable": false,
     // JS / TS settings
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
