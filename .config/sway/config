@@ -29,7 +29,7 @@ set $ws20 "20:"
 set $ws21 "21:"
 set $ws42 "42:"
 
-output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output * bg /usr/share/backgrounds/gnome/adwaita-d.webp fill
 
 # Include host-specific config after setting variables but before everything
 # else so that host-specific configs can override them
@@ -81,7 +81,7 @@ assign [app_id="^signal$"] $ws2
 assign [app_id="^Element"] $ws2
 assign [app_id="^Electron$" title="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
-assign [app_id="^NewsFlashGTK$"] $ws3
+assign [app_id="^com.gitlab.newsflash$"] $ws3
 assign [class="^Steam$"] $ws11
 assign [class="^Wine$"] $ws12
 assign [app_id="^Zulip$"] $ws19
@@ -93,7 +93,7 @@ assign [app_id="^io.github.quodlibet.QuodLibet$"] $ws42
 # Layout defaults
 for_window [app_id="^firefox$"] layout tabbed
 for_window [app_id="^thunderbird$"] layout tabbed
-for_window [app_id="^NewsFlashGTK$"] layout tabbed
+for_window [app_id="^com.gitlab.newsflash$"] layout tabbed
 for_window [app_id="^VSCodium$" title="VSCodium"] layout tabbed
 for_window [app_id="^Zulip$"] layout tabbed
 for_window [app_id="^$" title="^Zulip"] layout tabbed
