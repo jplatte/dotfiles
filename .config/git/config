@@ -2,11 +2,13 @@
 	email = jplatte+git@posteo.de
 	name = Jonas Platte
 [alias]
+	co = checkout
 	st = status
 	ff = merge --ff-only
 	hist = log --exclude='refs/remotes/*/gh-pages' --all --color --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 	amend = commit --amend
 	sw = switch
+	ff-main = fetch origin main:main
 [color]
 	ui = auto
 [advice]
