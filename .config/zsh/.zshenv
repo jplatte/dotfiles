@@ -17,6 +17,10 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
+# Other
+export ANDROID_SDK_HOME=/opt/android-sdk
+export ANDROID_NDK_HOME=/opt/android-ndk
+
 # Increase shell history size (default = 10k)
 export HISTSIZE=100000
 export SAVEHIST=100000

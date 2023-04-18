@@ -14,6 +14,7 @@ alias l='command ls -lvh --color=auto'
 alias la='command ls -lavh --color=auto'
 alias lsof='command lsof -P'
 alias ip='command ip -c'
+alias youtube-dl='yt-dlp'
 
 # Command not found
 source /usr/share/doc/pkgfile/command-not-found.zsh
