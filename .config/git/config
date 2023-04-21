@@ -16,8 +16,6 @@
 [advice]
 	detachedHead = false
 	addIgnoredFile = false
-[help]
-	autocorrect = 10
 [commit]
 	gpgSign = true
 [tag]
