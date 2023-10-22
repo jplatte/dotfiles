@@ -252,6 +252,8 @@ bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master             
 bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master                button7 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:16480:Logitech_MX_Master                button7 exec ~/.cargo/bin/i3-workspace-scroll prev
 bindsym --whole-window --input-device=1133:16480:Logitech_MX_Master                button6 exec ~/.cargo/bin/i3-workspace-scroll next
+bindsym --whole-window --input-device=1133:16489:Logitech_MX_Master_2S             button7 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window --input-device=1133:16489:Logitech_MX_Master_2S             button6 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:16480:Logitech_Wireless_Mouse_PID:4060  button6 exec ~/.cargo/bin/i3-workspace-scroll prev
 bindsym --whole-window --input-device=1133:16480:Logitech_Wireless_Mouse_PID:4060  button7 exec ~/.cargo/bin/i3-workspace-scroll next
 
