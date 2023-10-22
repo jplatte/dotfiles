@@ -6,7 +6,7 @@ input "1267:12734:MSFT0004:00_04F3:31BE_Touchpad" {
 }
 
 # Output device configuration
-output "Goldstar Company Ltd LG TV 0x00000101" {
+output "LG Electronics LG TV 0x00000101" {
     pos 1000 0
     res 1920x1080
     #scale 3
