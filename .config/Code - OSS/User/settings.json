@@ -75,31 +75,6 @@
     // JS / TS settings
     "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    // latex workshop
-    "latex-workshop.chktex.enabled": true,
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latexindent.args": [
-        "-c",
-        "%DIR%/",
-        "%TMPFILE%",
-        "-y",
-        "defaultIndent: '%INDENT%'"
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdfxe",
-                "-output-directory=output",
-                "%DOC%"
-            ]
-        }
-    ],
     // file type overrides
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
