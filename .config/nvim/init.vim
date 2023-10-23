@@ -22,6 +22,9 @@ set noshowmode
 " enable full color support
 set termguicolors
 
+" use system clipboard for everything
+set clipboard+=unnamedplus
+
 " enable mouse support
 set mouse=a
 
