@@ -4,7 +4,6 @@
     ],
     "modules-right": [
         "custom/pacman",
-        "custom/mouse-bat",
         "custom/df-root",
         "custom/df-home",
         "custom/df-daten",
@@ -23,22 +22,6 @@
         "interval": "once",
         "signal": 7,
         "on-click": "swaymsg exec -- alacritty -e bash -c '\"paru -Syu; pkill -SIGRTMIN+7 waybar\"'",
-        "tooltip": false
-    },
-    "custom/mouse-bat": {
-        "exec": "~/.config/waybar/modules/mouse-bat.sh",
-        "return-type": "json",
-        "interval": 60,
-        "format": "<span color='#888'></span> {icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "on-click": "solaar",
         "tooltip": false
     },
     "custom/df-root": {
