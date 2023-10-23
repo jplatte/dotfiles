@@ -30,7 +30,7 @@
 [pull]
 	ff = only
 [rebase]
-	autosquash = true
+	autoSquash = true
 [checkout]
 	defaultRemote = origin
 [fetch]
