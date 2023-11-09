@@ -33,7 +33,7 @@ output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 
 # Include host-specific config after setting variables but before everything
 # else so that host-specific configs can override them
-include "~/.config/sway/`hostnamectl hostname`/*"
+include "~/.config/sway/$(hostnamectl hostname)/*"
 
 # Colors               (border  bg      text    indicator child_border)
 client.focused          #bdbdbd #bdbdbd #000000 #bdbdbd   #bdbdbd
@@ -58,6 +58,7 @@ bar {
 }
 
 # Autostart
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec gammastep -m wayland
 exec sh -c "nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done >/dev/null"
 exec mako
@@ -68,7 +69,7 @@ exec element-desktop
 exec signal-desktop
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec swayidle \
-    timeout 300 '~/.local/bin/scripts/lock -f' \
+    timeout 600 '~/.local/bin/scripts/lock -f' \
     before-sleep '~/.local/bin/scripts/lock -f' \
     after-resume 'swaymsg "output * dpms on"'
 
@@ -83,6 +84,7 @@ input * {
 # Default workspaces for common programs
 assign [app_id="^signal$"] $ws2
 assign [app_id="^Element"] $ws2
+assign [class="^Element"] $ws2
 assign [app_id="^Electron$" title="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^com.gitlab.newsflash$"] $ws3
@@ -161,7 +163,7 @@ bindsym Control+$mod+q exec ~/.local/bin/scripts/zenity-poweroff
 bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
 
 # Suspend
-bindsym --locked Control+$mod+s exec systemctl suspend
+bindsym --locked Control+$mod+s exec sleep 0.1 && systemctl suspend
 
 # Volume controls
 bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5
@@ -260,6 +262,7 @@ bindsym --whole-window --input-device=1133:16480:Logitech_Wireless_Mouse_PID:406
 bindsym --input-device=1133:16449:Logitech_MX_Master                Control+Mod1+Tab move workspace to output up
 bindsym --input-device=1133:16480:Logitech_MX_Master                Control+Mod1+Tab move workspace to output right
 bindsym --input-device=1133:16480:Logitech_Wireless_Mouse_PID:4060  Control+Mod1+Tab move workspace to output right
+bindsym --input-device=1133:16489:Logitech_MX_Master_2S             Control+Mod1+Tab move workspace to output right
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
