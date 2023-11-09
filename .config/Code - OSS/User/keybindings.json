@@ -15,39 +15,4 @@
         "key": "ctrl+k ctrl+w",
         "command": "-workbench.action.closeAllEditors"
     },
-    {
-        "key": "alt+left",
-        "command": "cursorWordPartLeft",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "cursorWordPartLeftSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "alt+right",
-        "command": "-gitlens.key.alt+right",
-        "when": "gitlens:key:alt+right"
-    },
-    {
-        "key": "alt+right",
-        "command": "cursorWordPartRight",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "cursorWordPartRightSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "alt+backspace",
-        "command": "deleteWordPartLeft",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "alt+delete",
-        "command": "deleteWordPartRight",
-        "when": "textInputFocus"
-    }
 ]
