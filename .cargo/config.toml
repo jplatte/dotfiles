@@ -1,3 +1,6 @@
+[unstable]
+codegen-backend = true
+
 [alias]
 cov = "tarpaulin --skip-clean --profile tarpaulin"
 
