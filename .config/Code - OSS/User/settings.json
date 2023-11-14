@@ -50,6 +50,7 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "newUntitledFile",
     // GitLens
+    "gitlens.ai.experimental.generateCommitMessage.enabled": false,
     "gitlens.blame.avatars": false,
     "gitlens.blame.dateFormat": "YYYY-MM-DD",
     "gitlens.codeLens.enabled": false,
