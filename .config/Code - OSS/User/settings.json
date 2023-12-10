@@ -8,6 +8,7 @@
     "editor.fontSize": 12.5,
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
+    "editor.maxTokenizationLineLength": 200000,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
@@ -19,7 +20,7 @@
             "*.unsafe:rust": "#eb5046"
         }
     },
-    "editor.maxTokenizationLineLength": 200000,
+    "editor.occurrencesHighlight": "multiFile",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.fileNesting.enabled": true,
