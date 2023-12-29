@@ -1,0 +1,18 @@
+[window]
+opacity = 0.8
+padding = { x = 0, y = 0 }
+
+[cursor]
+style = "Underline"
+
+[font]
+size = 12.0
+normal = { family = "Iosevka SS06" }
+
+[keyboard]
+bindings = [
+    { mods = "Control", key = "Plus", action = "IncreaseFontSize" },
+    { mods = "Control", key = "Minus", action = "DecreaseFontSize" },
+    { mods = "Control", key = "Back", chars = "\u0017" },
+    { mods = "Control", key = "Delete", chars = "\u001BD" },
+]
