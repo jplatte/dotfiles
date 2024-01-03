@@ -89,7 +89,7 @@ assign [class="^Element"] $ws2
 assign [app_id="^Electron$" title="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^com.gitlab.newsflash$"] $ws3
-assign [class="^Steam$"] $ws11
+assign [class="^steam$"] $ws11
 assign [class="^Wine$"] $ws12
 assign [app_id="^Zulip$"] $ws19
 # Zulip currently uses an empty app_id
