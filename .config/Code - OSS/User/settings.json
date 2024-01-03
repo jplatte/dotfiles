@@ -3,6 +3,7 @@
     "breadcrumbs.enabled": true,
     "debug.toolBarLocation": "docked",
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Iosevka SS06', 'Font Awesome 5 Free'",
     "editor.fontSize": 12.5,
@@ -41,9 +42,8 @@
     "window.zoomLevel": 2,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
-    "workbench.activityBar.visible": true,
     "workbench.colorTheme": "Default Dark+",
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.settings.editor": "json",
@@ -58,7 +58,7 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
     "gitlens.defaultDateStyle": "absolute",
-    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.currentLine.over": "annotation",
     "gitlens.hovers.enabled": false,
     "gitlens.menus": {
         "editor": false,
@@ -101,6 +101,7 @@
         "/home/jplatte/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustfmt",
         "--edition=2021"
     ],
+    "rust-analyzer.showRequestFailedErrorNotification": false,
     "rust-analyzer.showUnlinkedFileNotification": false,
     // Web dev settings
     "html.format.templating": true,
