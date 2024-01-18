@@ -8,6 +8,7 @@ path=($path[@] /usr/lib/emscripten ~/.local/bin ~/.cargo/bin ~/.local/share/npm/
 
 # Aliases
 alias cal='command cal -3'
+alias cat='bat --plain'
 alias diff='command diff --color=auto'
 alias git='LANG=en_US.UTF-8 git'
 alias l='command ls -lvh --color=auto'
