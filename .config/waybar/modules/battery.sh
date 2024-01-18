@@ -1,18 +1,24 @@
 #!/bin/bash
 cd "/sys/class/power_supply/$1/"
 
-status=$(cat status)
-energy_f=$(( 100 * $(cat energy_now) / $(cat energy_full) ))
+# use percentage of intended-maximum charge / energy, not currently-maximum
+full=full_design
 
-if [[ "$status" == 'Unknown' ]] && (( $(cat power_now) == 0 )); then
-    status='Full'
+status=$(cat status)
+if [[ -e charge_now && -e charge_${full} ]]; then
+    value_full=$(( 100 * $(cat charge_now) / $(cat charge_${full}) ))
+elif [[ -e energy_now && -e energy_${full} ]]; then
+    value_full=$(( 100 * $(cat energy_now) / $(cat energy_${full}) ))
+else
+    text=$(printf '\ufffd ')
+    class='error'
 fi
 
 if [[ "$status" == 'Charging' ]]; then
     class='charging'
 elif [[ "$status" == 'Discharging' || "$status" == 'Not charging' ]]; then
     class='' # Do nothing
-elif [[ "$status" == 'Full' ]]; then
+elif [[ "$status" == 'Full' ]] || [[ "$status" == 'Unknown' && -e power_now ]] && (( $(cat power_now) == 0 )); then
     text=$(printf '<span color="#888">\uf0e7</span> ')
     class='full'
 elif [[ "$status" == 'Unknown' ]]; then
@@ -23,22 +29,20 @@ else
     class='error'
 fi
 
-energy_d=$((100 * $(cat energy_now) / $(cat energy_full_design)))
-
 if [[ "$status" == 'Charging' || "$status" == 'Discharging' ]]; then
     power=$(cat power_now | awk '{ printf "%.1f", $1 * 1e-6 }')
     text+=$(printf '%s\u2009W, ' "$power")
 fi
 
 if [[ "$status" == 'Discharging' ]]; then
-    if [[ "$energy_d" -lt 10 ]]; then
+    if [[ "$value_full" -lt 10 ]]; then
         class='very-low'
-    elif [[ "$energy_d" -lt 20 ]]; then
+    elif [[ "$value_full" -lt 20 ]]; then
         class='low'
     fi
 fi
 
-text+=$(printf '%s\u2009%%' "$energy_d")
+text+=$(printf '%s\u2009%%' "$value_full")
 
-jq -nc '{ "text": $ARGS.named.text, "class": $ARGS.named.class, "percentage": $ARGS.named.energy_f }' \
-    --arg text "$text" --arg class "$class" --argjson energy_f "$energy_f"
+jq -nc '{ "text": $ARGS.named.text, "class": $ARGS.named.class, "percentage": $ARGS.named.value_full }' \
+    --arg text "$text" --arg class "$class" --argjson value_full "$value_full"
