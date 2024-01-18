@@ -29,8 +29,8 @@ else
     class='error'
 fi
 
-if [[ "$status" == 'Charging' || "$status" == 'Discharging' ]]; then
-    power=$(cat power_now | awk '{ printf "%.1f", $1 * 1e-6 }')
+if [[ "$status" == 'Charging' || "$status" == 'Discharging' && -e power_now ]]; then
+    power=$(awk '{ printf "%.1f", $1 * 1e-6 }' < power_now)
     text+=$(printf '%s\u2009W, ' "$power")
 fi
 
