@@ -2,7 +2,7 @@
 set $mod Mod4
 set $menu sirula
 set $term alacritty
-set $browser firefox-nightly -P nightly
+set $browser firefox-developer-edition
 set $file_manager nautilus
 
 # Named workspaces
@@ -140,7 +140,7 @@ bindsym $mod+g exec gedit
 bindsym $mod+c exec ~/.local/bin/scripts/open_project ~/Projekte
 bindsym $mod+Mod1+c exec ~/.local/bin/scripts/open_code_workspace ~/Projekte
 bindsym $mod+y workspace $ws1; exec $browser
-bindsym $mod+Shift+Y exec firefox-nightly -P yt
+bindsym $mod+Shift+Y exec firefox-developer-edition -P yt
 
 # Screenshots
 # => Capture of all screens
