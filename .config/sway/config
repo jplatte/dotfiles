@@ -166,6 +166,10 @@ bindsym Control+$mod+r exec ~/.local/bin/scripts/zenity-reboot
 # Suspend
 bindsym --locked Control+$mod+s exec sleep 0.1 && systemctl suspend
 
+# Display brightness controls
+bindsym --locked XF86MonBrightnessUp   exec blight set +10%
+bindsym --locked XF86MonBrightnessDown exec blight set -10%
+
 # Volume controls
 bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5
 bindsym --locked XF86AudioLowerVolume exec pamixer -d 5

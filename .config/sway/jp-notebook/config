@@ -16,7 +16,3 @@ output eDP-1 pos 0 1080
 
 workspace $ws1 output eDP-1
 workspace $ws2 output eDP-1
-
-# Display brightness controls
-bindsym --locked XF86MonBrightnessUp   exec blight set +10%
-bindsym --locked XF86MonBrightnessDown exec blight set -10%
