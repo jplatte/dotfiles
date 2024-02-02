@@ -180,8 +180,9 @@ bindsym --locked XF86AudioPrev exec playerctl stop && playerctl previous && play
 bindsym --locked XF86AudioPlay exec playerctl play-pause || quodlibet --run --play
 bindsym --locked XF86AudioNext exec playerctl next && playerctl play
 
-# Move workspace between outputs
+# Output controls
 bindsym $mod+x move workspace to output right
+bindsym $mod+asciicircum output eDP-1 toggle
 
 bindsym Control+$mod+h move workspace to output left
 bindsym Control+$mod+j move workspace to output down
