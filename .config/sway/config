@@ -31,6 +31,15 @@ set $ws42 "42:"
 
 output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
 
+output "Lenovo Group Limited LEN L24q-30 U46250YH" {
+    pos 0 0
+    res 2560x1440@75Hz
+}
+output "Lenovo Group Limited LEN L24q-30 U46250YD" {
+    pos 2560 0
+    res 2560x1440@75Hz
+}
+
 # Include host-specific config after setting variables but before everything
 # else so that host-specific configs can override them
 include "~/.config/sway/$(hostnamectl hostname)/*"
