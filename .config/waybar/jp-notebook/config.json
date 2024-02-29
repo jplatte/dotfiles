@@ -30,7 +30,7 @@
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "<span color='#888'>{icon}</span> {}",
+        "format": "{icon} {}",
         "format-icons": [
             "",
             "",
