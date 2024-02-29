@@ -30,7 +30,8 @@ window#waybar.eDP-1 {
 }
 
 #workspaces button.visible {
-    border-bottom-color: #bbb;
+    color: #d0d0d0;
+    border-bottom-color: #d0d0d0;
 }
 
 #workspaces button.focused {
@@ -55,16 +56,16 @@ window#waybar.eDP-1 {
     /* unclear why .225em for bottom padding looks wrong on HiDPI */
     padding: .225em .375em .15em;
     margin: 0 .3em;
-    color: #ccc;
-    border-bottom: 3px solid #aaa;
+    color: #bbb;
+    border-bottom: 3px solid #888;
 }
 
-#pulseaudio.muted, #custom-wifi.disabled, #custom-owncloud.inactive {
+#pulseaudio.muted, #network.disconnected, #custom-wifi.disabled, #custom-owncloud.inactive {
     color: #888;
-    border-bottom-color: #888;
 }
 
 #custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging {
+    color: white;
     border-bottom-color: white;
 }
 
