@@ -6,7 +6,7 @@ input "1267:12734:MSFT0004:00_04F3:31BE_Touchpad" {
 }
 
 # Output device configuration
-output "LG Electronics LG TV 0x00000101" {
+output "LG Electronics LG TV 0x01010101" {
     pos 1000 0
     res 1920x1080
     #scale 3
@@ -16,3 +16,6 @@ output eDP-1 pos 0 1080
 
 workspace $ws1 output eDP-1
 workspace $ws2 output eDP-1
+
+# Autostart
+exec newsflash

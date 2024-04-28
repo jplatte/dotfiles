@@ -29,7 +29,7 @@ set $ws20 "20:"
 set $ws21 "21:"
 set $ws42 "42:"
 
-output * bg /usr/share/backgrounds/gnome/adwaita-d.jpg fill
+output * bg /usr/share/backgrounds/gnome/adwaita-d.jxl fill
 
 output "Lenovo Group Limited LEN L24q-30 U46250YH" {
     pos 0 0
@@ -97,7 +97,7 @@ assign [app_id="^Element"] $ws2
 assign [class="^Element"] $ws2
 assign [app_id="^Electron$" title="^Element"] $ws2
 assign [app_id="^thunderbird$"] $ws3
-assign [app_id="^com.gitlab.newsflash$"] $ws3
+assign [app_id="^io.gitlab.news_flash.NewsFlash$"] $ws3
 assign [class="^steam$"] $ws11
 assign [class="^Wine$"] $ws12
 assign [app_id="^Zulip$"] $ws19
@@ -129,8 +129,7 @@ for_window [app_id="^jmc$"] floating enable
 for_window [class="^Steam$"] layout tabbed
 
 # Other window-specific settings
-for_window [app_id="^Signal$"] opacity 0.9
-for_window [app_id="^$" title="^Signal$"] opacity 0.9
+for_window [app_id="^signal$"] opacity 0.9
 for_window [app_id="^Element"] opacity 0.9
 for_window [app_id="^org.gnome.Nautilus$"] opacity 0.9
 for_window [app_id="^org.gnome.gedit$"] opacity 0.9
@@ -192,6 +191,7 @@ bindsym --locked XF86AudioNext exec playerctl next && playerctl play
 # Output controls
 bindsym $mod+x move workspace to output right
 bindsym $mod+asciicircum output eDP-1 toggle
+bindsym $mod+period output eDP-1 power toggle
 
 bindsym Control+$mod+h move workspace to output left
 bindsym Control+$mod+j move workspace to output down
