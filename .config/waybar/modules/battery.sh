@@ -18,7 +18,7 @@ if [[ "$status" == 'Charging' ]]; then
     class='charging'
 elif [[ "$status" == 'Discharging' || "$status" == 'Not charging' ]]; then
     class='' # Do nothing
-elif [[ "$status" == 'Full' ]] || [[ "$status" == 'Unknown' && -e power_now ]] && (( $(cat power_now) == 0 )); then
+elif [[ "$status" == 'Full' ]] || ([[ "$status" == 'Unknown' && -e power_now ]] && (( $(cat power_now) == 0 ))); then
     text=$(printf '\uf0e7 ')
     class='full'
 elif [[ "$status" == 'Unknown' ]]; then
