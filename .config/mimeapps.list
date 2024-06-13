@@ -28,14 +28,14 @@ image/x-xcf=gimp.desktop
 image/x-xpixmap=org.gnome.eog.desktop
 message/rfc822=thunderbird.desktop
 text/csv=org.gnome.gedit.desktop
-text/html=firefoxdeveloperedition.desktop
+text/html=firefox-developer-edition.desktop
 text/markdown=org.gnome.gedit.desktop
 text/plain=org.gnome.gedit.desktop
 video/mp4=mpv.desktop
 video/webm=mpv.desktop
 x-scheme-handler/mailto=thunderbird.desktop
-x-scheme-handler/http=firefoxdeveloperedition.desktop
-x-scheme-handler/https=firefoxdeveloperedition.desktop
+x-scheme-handler/http=firefox-developer-edition.desktop
+x-scheme-handler/https=firefox-developer-edition.desktop
 
 [Added Associations]
 application/illustrator=org.inkscape.Inkscape.desktop;
