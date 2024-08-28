@@ -64,7 +64,8 @@ window#waybar.eDP-1 {
     color: #888;
 }
 
-#custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging {
+#custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging,
+#custom-wifi.connecting {
     color: white;
     border-bottom-color: white;
 }

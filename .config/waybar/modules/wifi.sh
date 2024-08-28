@@ -21,7 +21,7 @@ iwconfig_out=$(iwconfig "$iface")
 if [[ -z "$network_name" ]]; then
     jq -nc '{ "text": " disconnected", "class": "disconnected" }'
 elif ( grep -qF 'ESSID:off/any' <<< "$iwconfig_out" ); then
-    jq -nc '{ "text": " disconnected?", "class": "disconnected" }'
+    jq -nc '{ "text": " connecting…", "class": "connecting" }'
 else
     freq=$(iwconfig "$iface" | grep -q 'Frequency:2' && printf '2.4' || printf '5')
 
