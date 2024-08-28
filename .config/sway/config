@@ -100,6 +100,8 @@ assign [app_id="^thunderbird$"] $ws3
 assign [app_id="^io.gitlab.news_flash.NewsFlash$"] $ws3
 assign [class="^steam$"] $ws11
 assign [class="^Wine$"] $ws12
+assign [app_id="^io.mrarm.mcpelauncher-ui-qt$"] $ws12
+assign [class="^mcpelauncher-client$"] $ws12
 assign [app_id="^Zulip$"] $ws19
 # Zulip currently uses an empty app_id
 assign [app_id="^$" title="^Zulip"] $ws19
