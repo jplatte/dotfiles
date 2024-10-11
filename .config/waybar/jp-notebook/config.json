@@ -18,7 +18,7 @@
         "format": "{name}"
     },
     "custom/pacman": {
-        "format": " {}",
+        "format": " {0}",
         "exec": "~/.config/waybar/modules/pacman.sh",
         "interval": "once",
         "signal": 7,
@@ -30,7 +30,7 @@
         "return-type": "json",
         "interval": 15,
         "signal": 2,
-        "format": "{icon} {}",
+        "format": "{icon} {0}",
         "format-icons": [
             "",
             "",
