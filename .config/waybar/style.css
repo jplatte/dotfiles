@@ -31,22 +31,22 @@ window#waybar.eDP-1 {
 
 #workspaces button.visible {
     color: #d0d0d0;
-    border-bottom-color: #d0d0d0;
+    border-color: #d0d0d0;
 }
 
 #workspaces button.focused {
     color: white;
-    border-bottom-color: white;
+    border-color: white;
 }
 
 #workspaces button.urgent {
     color: @red;
-    border-bottom-color: @red;
+    border-color: @red;
 }
 
 #workspaces button.urgent.focused {
     color: @brightred;
-    border-bottom-color: @brightred;
+    border-color: @brightred;
 }
 
 #workspaces button, #cpu, #memory, #pulseaudio, #clock, #custom-battery,
@@ -67,20 +67,20 @@ window#waybar.eDP-1 {
 #custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging,
 #custom-wifi.connecting {
     color: white;
-    border-bottom-color: white;
+    border-color: white;
 }
 
 #custom-wifi.good-link-q {
-    border-bottom-color: @green;
+    border-color: @green;
 }
 
 #custom-battery.low:not(.charging), #custom-wifi.bad-link-q {
-    border-bottom-color: @yellow;
+    border-color: @yellow;
 }
 
 #custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
     color: @red;
-    border-bottom-color: @red;
+    border-color: @red;
 }
 
 #clock.clock {
