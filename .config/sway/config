@@ -69,7 +69,7 @@ bar {
 # Autostart
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY XDG_CURRENT_DESKTOP
-exec gammastep -m wayland
+exec gammastep
 exec sh -c "nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done >/dev/null"
 exec mako
 # => Round volume to a multiple of 5
@@ -192,8 +192,8 @@ bindsym --locked XF86AudioNext exec playerctl next && playerctl play
 
 # Output controls
 bindsym $mod+x move workspace to output right
-bindsym $mod+asciicircum output eDP-1 toggle
-bindsym $mod+period output eDP-1 power toggle
+bindsym --locked $mod+asciicircum output eDP-1 toggle
+bindsym --locked $mod+period output eDP-1 power toggle
 
 bindsym Control+$mod+h move workspace to output left
 bindsym Control+$mod+j move workspace to output down
@@ -267,8 +267,8 @@ bindsym $mod+F12 workspace $ws42
 
 # Switch to previous / next workspace using horizontal mouse wheel
 # the + before button6 / button7 seems to be mandatory
-bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master                button6 exec ~/.cargo/bin/i3-workspace-scroll prev
-bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master                button7 exec ~/.cargo/bin/i3-workspace-scroll next
+bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master                button7 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window --input-device=1133:16449:Logitech_MX_Master                button6 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:16480:Logitech_MX_Master                button7 exec ~/.cargo/bin/i3-workspace-scroll prev
 bindsym --whole-window --input-device=1133:16480:Logitech_MX_Master                button6 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:16489:Logitech_MX_Master_2S             button7 exec ~/.cargo/bin/i3-workspace-scroll prev
@@ -277,11 +277,16 @@ bindsym --whole-window --input-device=1133:16480:Logitech_Wireless_Mouse_PID:406
 bindsym --whole-window --input-device=1133:16480:Logitech_Wireless_Mouse_PID:4060  button7 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:45079:MX_Master_Mouse                   button6 exec ~/.cargo/bin/i3-workspace-scroll next
 bindsym --whole-window --input-device=1133:45079:MX_Master_Mouse                   button7 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window --input-device=1133:45081:MX_Master_2S_Mouse                button6 exec ~/.cargo/bin/i3-workspace-scroll next
+bindsym --whole-window --input-device=1133:45081:MX_Master_2S_Mouse                button7 exec ~/.cargo/bin/i3-workspace-scroll prev
 
 bindsym --input-device=1133:16449:Logitech_MX_Master                Control+Mod1+Tab move workspace to output up
 bindsym --input-device=1133:16480:Logitech_MX_Master                Control+Mod1+Tab move workspace to output right
 bindsym --input-device=1133:16480:Logitech_Wireless_Mouse_PID:4060  Control+Mod1+Tab move workspace to output right
 bindsym --input-device=1133:16489:Logitech_MX_Master_2S             Control+Mod1+Tab move workspace to output right
+
+bindsym --whole-window $mod+button4 exec ~/.cargo/bin/i3-workspace-scroll prev
+bindsym --whole-window $mod+button5 exec ~/.cargo/bin/i3-workspace-scroll next
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
