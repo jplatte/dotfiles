@@ -65,7 +65,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol",
+        "on-click": "pwvucontrol",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
         "tooltip": false
