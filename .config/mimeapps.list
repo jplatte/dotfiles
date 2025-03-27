@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=org.gnome.Evince.desktop
+application/pdf=org.gnome.Papers.desktop
 application/x-cd-image=gnome-disk-image-mounter.desktop;
 audio/mpeg=mpv.desktop
 audio/x-opus+ogg=mpv.desktop
