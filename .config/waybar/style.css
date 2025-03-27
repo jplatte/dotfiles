@@ -19,6 +19,7 @@ window#waybar.eDP-1 {
 #workspaces button {
     border: none;
     border-radius: 0;
+    font-weight: normal;
 }
 
 #workspaces button:hover {
