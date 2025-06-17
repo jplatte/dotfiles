@@ -92,6 +92,7 @@
     "rust-analyzer.diagnostics.disabled": [],
     "rust-analyzer.diagnostics.experimental.enable": true,
     "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.cargo.targetDir": true,
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.files.watcher": "server",
     "rust-analyzer.hover.documentation.keywords.enable": false,
