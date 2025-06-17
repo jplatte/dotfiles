@@ -13,6 +13,7 @@
 	fixup = commit --fixup
 	ff-main = update-ref refs/heads/main origin/main
 	fetch-main = fetch origin main:main
+	pul = pull
 	psuh = push
 	puhs = push
 [color]
