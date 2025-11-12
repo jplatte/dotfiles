@@ -52,6 +52,7 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.layoutControl.enabled": false,
     "workbench.navigationControl.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
