@@ -42,6 +42,7 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+	default = upstream
 [safe]
 	directory = /etc
 [rerere]
