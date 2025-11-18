@@ -47,7 +47,8 @@ window#waybar.eDP-1 {
 }
 
 #workspaces button.visible {
-    color: #d0d0d0;
+    color: black;
+    background-color: #bbb;
 }
 
 #workspaces button.focused {
