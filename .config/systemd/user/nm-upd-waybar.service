@@ -1,0 +1,9 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/sh -c '/usr/bin/nmcli monitor | while read _; do pkill -RTMIN+1 waybar; done'
+Restart=on-failure
+
