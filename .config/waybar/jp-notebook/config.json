@@ -1,6 +1,7 @@
 {
+    "layer": "top",
     "modules-left": [
-        "sway/workspaces"
+        "niri/workspaces"
     ],
     "modules-center": [],
     "modules-right": [
@@ -14,15 +15,20 @@
         "clock#date",
         "clock#clock"
     ],
-    "sway/workspaces": {
-        "format": "{name}"
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "browser": "",
+            "chat": "",
+            "email": ""
+        }
     },
     "custom/pacman": {
         "format": " {0}",
         "exec": "~/.config/waybar/modules/pacman.sh",
         "interval": "once",
         "signal": 7,
-        "on-click": "swaymsg exec -- alacritty -e bash -c '\"paru -Syu; pkill -SIGRTMIN+7 waybar\"'",
+        "on-click": "niri msg action spawn -- alacritty -e bash -c 'paru -Syu; pkill -RTMIN+7 waybar; read'",
         "tooltip": false
     },
     "custom/battery": {
@@ -58,7 +64,7 @@
         "interval": "once",
         "signal": 1,
         "format": "{}",
-        "on-click": "alacritty -e nmtui",
+        "on-click": "niri msg action spawn -- alacritty -e nmtui",
         "tooltip": false
     },
     "pulseaudio": {

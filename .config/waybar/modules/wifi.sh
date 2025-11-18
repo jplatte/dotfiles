@@ -19,7 +19,7 @@ network_name=$(
 iwconfig_out=$(iwconfig "$iface")
 
 if [[ -z "$network_name" ]]; then
-    jq -nc '{ "text": " disconnected", "class": "disconnected" }'
+    jq -nc '{ "text": $ARGS.named.text, "class": "disconnected" }' --arg text '<span color="#c43030"></span> disconnected'
 elif ( grep -qF 'ESSID:off/any' <<< "$iwconfig_out" ); then
     jq -nc '{ "text": " connecting…", "class": "connecting" }'
 else
@@ -32,11 +32,11 @@ else
     )
 
     if [[ $(bc <<< "scale=2; $link_quality < 0.6") == 1 ]]; then
-        class='bad-link-q'
+        color="#eebf13"
     else
-        class='good-link-q'
+        color="#3c913b"
     fi
 
-    text=$(printf '<span color="#888"></span> %s (%s\u2009GHz)' "$network_name" "$freq")
-    jq -nc '{ "text": $ARGS.named.text, "class": $ARGS.named.class }' --arg text "$text" --arg class "$class"
+    text=$(printf '<span color="%s"></span> %s (%s\u2009GHz)' "$color" "$network_name" "$freq")
+    jq -nc '{ "text": $ARGS.named.text }' --arg text "$text"
 fi

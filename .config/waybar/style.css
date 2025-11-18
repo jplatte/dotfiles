@@ -16,9 +16,21 @@ window#waybar.eDP-1 {
     font-size: 12px;
 }
 
+#workspaces button, #cpu, #memory, #pulseaudio, #clock, #custom-battery,
+#custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home,
+#custom-df-daten, #network, #custom-owncloud, #custom-mpris-volume,
+#custom-pacman, #custom-mumble-users {
+    /* unclear why .225em for bottom padding looks wrong on HiDPI */
+    padding: .225em .375em .15em;
+    margin: 0 .3em;
+    color: #bbb;
+}
+
 #workspaces button {
     border: none;
     border-radius: 0;
+    padding-left: .5em;
+    padding-right: .5em;
     font-weight: normal;
 }
 
@@ -30,35 +42,25 @@ window#waybar.eDP-1 {
     margin-left: 0;
 }
 
+#workspaces button.empty {
+    color: transparent;
+}
+
 #workspaces button.visible {
     color: #d0d0d0;
-    border-color: #d0d0d0;
 }
 
 #workspaces button.focused {
-    color: white;
-    border-color: white;
+    color: black;
+    background-color: #f2f2f2;
 }
 
 #workspaces button.urgent {
     color: @red;
-    border-color: @red;
 }
 
 #workspaces button.urgent.focused {
     color: @brightred;
-    border-color: @brightred;
-}
-
-#workspaces button, #cpu, #memory, #pulseaudio, #clock, #custom-battery,
-#custom-wifi, #custom-mouse-bat, #custom-df-root, #custom-df-home,
-#custom-df-daten, #network, #custom-owncloud, #custom-mpris-volume,
-#custom-pacman, #custom-mumble-users {
-    /* unclear why .225em for bottom padding looks wrong on HiDPI */
-    padding: .225em .375em .15em;
-    margin: 0 .3em;
-    color: #bbb;
-    border-bottom: 3px solid #888;
 }
 
 #pulseaudio.muted, #network.disconnected, #custom-wifi.disabled, #custom-owncloud.inactive {
@@ -68,20 +70,10 @@ window#waybar.eDP-1 {
 #custom-battery.charging, #custom-battery.error, #custom-mouse-bat.charging,
 #custom-wifi.connecting {
     color: white;
-    border-color: white;
 }
 
-#custom-wifi.good-link-q {
-    border-color: @green;
-}
-
-#custom-battery.low:not(.charging), #custom-wifi.bad-link-q {
-    border-color: @yellow;
-}
-
-#custom-battery.very-low:not(.charging), #network.disconnected, #custom-wifi.disconnected {
+#custom-battery.very-low:not(.charging), #network.disconnected {
     color: @red;
-    border-color: @red;
 }
 
 #clock.clock {
