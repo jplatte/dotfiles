@@ -16,11 +16,15 @@
 	pul = pull
 	psuh = push
 	puhs = push
+	pushh = push
+	resotre = restore
+	ts = status
 [color]
 	ui = auto
 [advice]
 	detachedHead = false
 	addIgnoredFile = false
+	skippedCherryPicks = false
 [commit]
 	gpgSign = true
 [tag]
@@ -47,3 +51,5 @@
 	directory = /etc
 [rerere]
 	enabled = true
+[diff]
+	colorMoved = true
